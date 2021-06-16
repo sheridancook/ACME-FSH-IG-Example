@@ -1,0 +1,271 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 38, errors = 3, warn = 3, info = 6 -->
+<head>
+  <title>ACMEFSHExample : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for ACMEFSHExample</h1>
+ <p>Generated Wed Jun 16 18:53:06 UTC 2021, FHIR version 4.0.1 for acme.fsh.example#0.1.0 (canonical = <a href="https://fake-acme.org/fhir/ACMEFSHExample">https://fake-acme.org/fhir/ACMEFSHExample</a> (<a href="https://fake-acme.org/fhir/ACMEFSHExample/history.html">history</a>)). See <a href="/github/workspace/output/qa.min.html">Errors Only</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.73</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = acme.fsh.example, Canonical = https://fake-acme.org/fhir/ACMEFSHExample</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Version Check:</td><td>0.1.0: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> acme.fsh.example</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">https://fake-acme.org/fhir/ACMEFSHExample</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> acme.base.r4</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.3</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/github/workspace/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.us.core</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">3.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/us/core</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/us/core/STU3.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table><para>Templates: fhir.base.template#0.2.1</para></div></td></tr>
+ <tr><td>Publication Rules:</td><td>Code = n/a. n/a - not an HL7.org or FHIR.org implementation guide
+ <br/><br/>The copyrightYear parameter ('2021+') in the IG resource is good</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://fake-acme.org/fhir/ACMEFSHExample (Problem #1 with package-list.json at https://fake-acme.org/fhir/ACMEFSHExample: fake-acme.org)</td></tr>
+ <tr><td>Summary:</td><td> broken links = 38, errors = 3, warn = 3, info = 6</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>40</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_ImplementationGuide-acme.fsh.example"><b>/github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-MyPatient"><b>/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>7</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a></h2>
+ <table class="grid">
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide.dependency[0].url</b></td><td><b>warning</b></td><td title=""><b>The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/MyPatient.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>?pkp-1?</b></td><td><b>error</b></td><td title=""><b>The reference https://fake-acme.org/fhir/StructureDefinition/ACME-base-practitioner could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>?pkp-1?</b></td><td><b>error</b></td><td title=""><b>The reference https://fake-acme.org/fhir/StructureDefinition/ACME-base-organization could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#4b63759f-c3f7-4a88-ad9c-6576ecb845c1">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 305, column 357</a></b></td><td><b>error</b></td><td><b>The link 'extensibility.html#modifierExtension' for &quot;definition of modifier extensions&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#b45539b3-e3a7-497b-8a70-8288f8d55826">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 390, column 339</a></b></td><td><b>error</b></td><td><b>The link 'extension-rendered-value.html' for &quot;Rendered Value extension&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#6e63a636-70f9-42e0-9bf8-893abc5b73bc">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 402, column 72</a></b></td><td><b>error</b></td><td><b>The link 'datatypes.html#Duration' for &quot;Duration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#580fa6b6-42d9-4ba1-8896-d651db653a0a">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 493, column 339</a></b></td><td><b>error</b></td><td><b>The link 'extension-rendered-value.html' for &quot;Rendered Value extension&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#c03375b0-e459-4beb-b426-1d25bbaf20fc">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 505, column 72</a></b></td><td><b>error</b></td><td><b>The link 'datatypes.html#Duration' for &quot;Duration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#e744e90a-69fc-4ddb-9e0d-eaa5178ae005">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 636, column 72</a></b></td><td><b>error</b></td><td><b>The link 'datatypes.html#Duration' for &quot;Duration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#16c9fe67-265d-4fe4-8edd-5c1938f88f15">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 724, column 72</a></b></td><td><b>error</b></td><td><b>The link 'datatypes.html#Duration' for &quot;Duration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#52610e2d-d1d4-4b36-a773-2efd9f46f769">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 822, column 399</a></b></td><td><b>error</b></td><td><b>The link 'location.html#' for &quot;Location&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#1296eda6-f07e-47d1-a256-cd07c844fb5d">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 923, column 72</a></b></td><td><b>error</b></td><td><b>The link 'datatypes.html#Duration' for &quot;Duration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#3f4dc40d-f0f7-47ad-9237-bbb2480aeddc">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1005, column 357</a></b></td><td><b>error</b></td><td><b>The link 'extensibility.html#modifierExtension' for &quot;definition of modifier extensions&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#d9d38fc4-a4b9-4bf7-afaa-fd55fdcf467d">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1055, column 249</a></b></td><td><b>error</b></td><td><b>The link 'location.html#' for &quot;Location&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#691c3641-db74-41e4-94ef-332b502462c3">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1090, column 72</a></b></td><td><b>error</b></td><td><b>The link 'datatypes.html#Duration' for &quot;Duration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#0bb64956-132d-42ec-81bf-6d1d98ba17f1">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1129, column 357</a></b></td><td><b>error</b></td><td><b>The link 'extensibility.html#modifierExtension' for &quot;definition of modifier extensions&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#8efc5cf9-4c31-4580-b132-8ee0dc3b0e3e">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1166, column 294</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;ACMEbasePractitioner&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#8efc5cf9-4c31-4580-b132-8ee0dc3b0e3e">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1166, column 410</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;ACMEbaseOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#ceec8fcc-3ec9-46a3-8bbc-774ecd02027c">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1178, column 151</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;ACMEbaseOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#a6f030a8-6dd7-4d23-a434-89612ef7aa8b">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1224, column 357</a></b></td><td><b>error</b></td><td><b>The link 'extensibility.html#modifierExtension' for &quot;definition of modifier extensions&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-definitions.html#856189ad-33d0-4230-b8bb-cd0abed33f4a">StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/p/a at Line 1306, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-examples.html#d4aa8729-b308-434a-a6e3-98b020607bed">StructureDefinition-MyPatient-examples.html#/html/body/div/div/div/p/a at Line 233, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient-mappings.html#50d67d15-6c22-4f04-817d-b0de80f31fa9">StructureDefinition-MyPatient-mappings.html#/html/body/div/div/div/p/a at Line 460, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#9d913c5d-a7fd-4330-94f9-fd6742066c24">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 234, column 44</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;ACMEbasePatient&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#13de1127-29ae-4ba4-a5a4-0a46a733d0e9">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 249, column 44</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;ACMEbasePatient&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#27f036a4-2a94-41d9-b3fc-0a0a70352015">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 360, column 1580</a></b></td><td><b>error</b></td><td><b>The link 'unknown.html' for &quot;ACMEbasePractitioner&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#27f036a4-2a94-41d9-b3fc-0a0a70352015">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 360, column 1630</a></b></td><td><b>error</b></td><td><b>The link 'unknown.html' for &quot;ACMEbaseOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#895caffd-6729-473d-840e-f272dc1bb17f">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 361, column 1666</a></b></td><td><b>error</b></td><td><b>The link 'unknown.html' for &quot;ACMEbaseOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#178eeccd-3838-4059-ab9c-6cb403a526fa">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 554, column 44</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;ACMEbasePatient&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#02cea6fe-52c2-4b8d-adb9-53e0a7ade0b8">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 568, column 44</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;ACMEbasePatient&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#855d49b4-d65f-4bc9-a077-f4ba84c9013f">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 1580</a></b></td><td><b>error</b></td><td><b>The link 'unknown.html' for &quot;ACMEbasePractitioner&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#855d49b4-d65f-4bc9-a077-f4ba84c9013f">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 1630</a></b></td><td><b>error</b></td><td><b>The link 'unknown.html' for &quot;ACMEbaseOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#aa52e89c-e126-4398-b058-d43500c5a9be">StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 680, column 1666</a></b></td><td><b>error</b></td><td><b>The link 'unknown.html' for &quot;ACMEbaseOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.html#d5fe3fd4-ece1-4f48-8a77-c562fe2026e1">StructureDefinition-MyPatient.html#/html/body/div/div/div/p/a at Line 1046, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.profile.history.html#96a28a1e-e51b-4c7e-9237-8f40fc39b8f1">StructureDefinition-MyPatient.profile.history.html#/html/body/div/div/div/p/a at Line 222, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.profile.json.html#f73d2701-bf86-4acf-84ae-d2880da1f500">StructureDefinition-MyPatient.profile.json.html#/html/body/div/div/div/p/a at Line 6374, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.profile.ttl.html#7a3a3253-1918-4bcd-ab34-124e8300dc8c">StructureDefinition-MyPatient.profile.ttl.html#/html/body/div/div/div/p/a at Line 5392, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-MyPatient.profile.xml.html#dd70c6b1-3878-46a2-8092-fdaba751721f">StructureDefinition-MyPatient.profile.xml.html#/html/body/div/div/div/p/a at Line 5664, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#e75abae6-dd82-407c-979d-4c2dadd3d4c7">artifacts.html#/html/body/div/div/div/p/a at Line 171, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#98300b60-57c5-4ac7-8716-6e7158b6ca4a">index.html#/html/body/div/div/div/p/a at Line 155, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#00d884cc-541d-4710-8198-c33b529be76b">toc.html#/html/body/div/div/div/p/a at Line 137, column 28</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_ImplementationGuide-acme.fsh.example"> </a>
+<h2><a href="ImplementationGuide-acme.fsh.example.html">/github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ImplementationGuide/acme.fsh.example: ImplementationGuide</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_fsh-generated_resources_StructureDefinition-MyPatient"> </a>
+<h2><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition.snapshot.element[19].mapping[2].map</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition.snapshot.element[28].mapping[2].map</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition.snapshot.element[40].mapping[2].map</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition.snapshot.element[48].mapping[2].map</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition.snapshot.element[64].mapping[2].map</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition.snapshot.element[78].mapping[2].map</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/MyPatient: StructureDefinition.snapshot.element[10].binding</b></td><td><b>error</b></td><td title="SD_ED_BIND_NO_BINDABLE"><b>The element Patient.extension has a binding, but no bindable types are present [Extension]</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'https://fake-acme.org/fhir/ACMEFSHExample/StructureDefinition/MyPatient')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="SD_ED_BIND_NO_BINDABLE"> </a>
+<h2>SD_ED_BIND_NO_BINDABLE</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></td><td><b>The element Patient.extension has a binding, but no bindable types are present [Extension]</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="SECURITY_STRING_CONTENT_WARNING"> </a>
+<h2>SECURITY_STRING_CONTENT_WARNING</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-MyPatient.html">/github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+</table>
+</body>
+</html>
