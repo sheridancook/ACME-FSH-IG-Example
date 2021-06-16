@@ -1,0 +1,45 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "acme.fsh.example",
+  "url": "https://fake-acme.org/fhir/ACMEFSHExample/ImplementationGuide/acme.fsh.example",
+  "version": "0.1.0",
+  "name": "ACMEFSHExample",
+  "status": "draft",
+  "packageId": "acme.fsh.example",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/MyPatient"
+        },
+        "name": "MyPatient",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
