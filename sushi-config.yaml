@@ -3,7 +3,7 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: acme.fsh.ig.example
-canonical: https://fake-acme.org/fhir/
+canonical: https://fake-acme.org/fhir
 name: ACMEFSHIGExample
 status: draft
 version: 0.1.0

@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "acme.fsh.ig.example",
-  "url": "https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.ig.example",
+  "url": "https://fake-acme.org/fhir/ImplementationGuide/acme.fsh.ig.example",
   "version": "0.1.0",
   "name": "ACMEFSHIGExample",
   "status": "draft",
@@ -31,7 +31,7 @@
           "reference": "Patient/EveAnyperson"
         },
         "name": "EveAnyperson",
-        "exampleCanonical": "https://fake-acme.org/fhir//StructureDefinition/MyPatient"
+        "exampleCanonical": "https://fake-acme.org/fhir/StructureDefinition/MyPatient"
       }
     ],
     "page": {
