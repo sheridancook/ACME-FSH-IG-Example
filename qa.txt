@@ -3,7 +3,7 @@
 
 err = 3, warn = 3, info = 6
 IG Publisher Version: 1.1.73
-Generated Wed Jun 16 20:37:58 UTC 2021. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir)
+Generated Wed Jun 16 20:40:47 UTC 2021. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACME-FSH-IG-Example)
 
  Build Errors : 45 / 3 / 0
  /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example : 0 / 0 / 1
@@ -20,7 +20,7 @@ ERROR: /github/workspace/output/Patient-EveAnyperson.change.history.html#/html/b
 ERROR: /github/workspace/output/Patient-EveAnyperson.html#/html/body/div/div/div/p/a at Line 186, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/Patient-EveAnyperson.json.html#/html/body/div/div/div/p/a at Line 217, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/Patient-EveAnyperson.ttl.html#/html/body/div/div/div/p/a at Line 230, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/Patient-EveAnyperson.xml.html#/html/body/div/div/div/p/a at Line 209, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/Patient-EveAnyperson.xml.html#/html/body/div/div/div/p/a at Line 210, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 315, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 400, column 339: The link 'extension-rendered-value.html' for "Rendered Value extension" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 412, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
@@ -55,14 +55,14 @@ ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/di
 ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.history.html#/html/body/div/div/div/p/a at Line 232, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.json.html#/html/body/div/div/div/p/a at Line 6376, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.ttl.html#/html/body/div/div/div/p/a at Line 5398, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/html/body/div/div/div/p/a at Line 5669, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/html/body/div/div/div/p/a at Line 5670, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 191, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 155, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 137, column 28: The link '' for "" cannot be resolved
 == /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example.json ==
 INFORMATION: ImplementationGuide/acme.fsh.ig.example: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 == /github/workspace/fsh-generated/resources/Patient-EveAnyperson.json ==
-INFORMATION: Patient/EveAnyperson: Patient: Validate resource against profile https://fake-acme.org/fhir/StructureDefinition/MyPatient
+INFORMATION: Patient/EveAnyperson: Patient: Validate resource against profile https://fake-acme.org/fhir/ACME-FSH-IG-Example/StructureDefinition/MyPatient
 == /github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json ==
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[19].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk

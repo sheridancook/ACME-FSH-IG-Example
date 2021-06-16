@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fake-acme.org/fhir/Patient/EveAnyperson> a fhir:Patient;
+<https://fake-acme.org/fhir/ACME-FSH-IG-Example/Patient/EveAnyperson> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "EveAnyperson"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "https://fake-acme.org/fhir/StructureDefinition/MyPatient";
+       fhir:value "https://fake-acme.org/fhir/ACME-FSH-IG-Example/StructureDefinition/MyPatient";
        fhir:index 0;
-       fhir:link <https://fake-acme.org/fhir/StructureDefinition/MyPatient>
+       fhir:link <https://fake-acme.org/fhir/ACME-FSH-IG-Example/StructureDefinition/MyPatient>
      ]
   ];
   fhir:DomainResource.text [
@@ -37,7 +37,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fake-acme.org/fhir/Patient/EveAnyperson.ttl> a owl:Ontology;
+<https://fake-acme.org/fhir/ACME-FSH-IG-Example/Patient/EveAnyperson.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

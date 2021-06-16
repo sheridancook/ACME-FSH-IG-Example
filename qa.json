@@ -1,9 +1,9 @@
 {
-  "url": "https://fake-acme.org/fhir/ImplementationGuide/acme.fsh.ig.example",
+  "url": "https://fake-acme.org/fhir/ACME-FSH-IG-Example/ImplementationGuide/acme.fsh.ig.example",
   "name": "ACMEFSHIGExample",
   "package-id": "acme.fsh.ig.example",
   "ig-ver": "0.1.0",
-  "date": "Wed, 16 Jun, 2021 20:37:46 +0000",
+  "date": "Wed, 16 Jun, 2021 20:40:34 +0000",
   "errs": 3,
   "warnings": 3,
   "hints": 6,
