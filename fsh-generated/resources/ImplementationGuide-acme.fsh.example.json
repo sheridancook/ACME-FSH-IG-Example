@@ -9,6 +9,14 @@
   "fhirVersion": [
     "4.0.1"
   ],
+  "dependsOn": [
+    {
+      "packageId": "acme.base.r4",
+      "uri": "https://simplifier.net/guide/acmebaseprojectr4implementationguide",
+      "version": "4.0.3",
+      "id": "acme_base_r4"
+    }
+  ],
   "definition": {
     "resource": [
       {

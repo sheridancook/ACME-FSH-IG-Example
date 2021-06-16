@@ -10,6 +10,10 @@ version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
+dependencies:
+  acme.base.r4:
+    uri: https://simplifier.net/guide/acmebaseprojectr4implementationguide
+    version: 4.0.3
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

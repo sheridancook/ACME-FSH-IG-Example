@@ -1,22 +1,17 @@
 {
   "resourceType": "StructureDefinition",
   "id": "MyPatient",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Base.Individuals"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "https://fake-acme.org/fhir/ACMEFSHExample/StructureDefinition/MyPatient",
   "version": "0.1.0",
   "name": "MyPatient",
   "status": "active",
   "fhirVersion": "4.0.1",
   "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
     {
       "identity": "rim",
       "uri": "http://hl7.org/v3",
@@ -46,15 +41,13 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "baseDefinition": "https://fake-acme.org/fhir/StructureDefinition/ACME-base-patient",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Patient.name",
-        "path": "Patient.name",
-        "min": 1,
-        "mustSupport": true
+        "id": "Patient",
+        "path": "Patient"
       }
     ]
   }
