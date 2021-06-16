@@ -9,3 +9,7 @@ The template repository includes a preconfigured GitHub Action to validate your 
 
 ## Synchronization with Simplifier.net FHIR projects
 The template repository can be connected to a [Simplifier.net](http://simplifier.net) project for easy visualization, documentation and publishing. For the current project the `main` branch automatically synchronizes with [this Simplifier.net FHIR project](https://simplifier.net/ACMEGitHubExample) on every commit. Learn how to set up [Simplifier.net GitHub synchronization](https://docs.fire.ly/projects/Simplifier/simplifierGithub.html).
+
+## Publishing of IG Publisher on GitHub Pages
+
+The Implementation Guide built from this project is also published on every commit on [our repository's GitHub Pages](https://wardweistra.github.io/ACMEFSHExample/), as taken from [this Tutorial IG](https://github.com/hl7-be/tutorial_ig).
