@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "acme.fsh.example",
-  "url": "https://fake-acme.org/fhir/ACMEFSHExample/ImplementationGuide/acme.fsh.example",
+  "url": "https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example",
   "version": "0.1.0",
   "name": "ACMEFSHExample",
   "status": "draft",

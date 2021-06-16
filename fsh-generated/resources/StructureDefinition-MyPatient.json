@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "MyPatient",
-  "url": "https://fake-acme.org/fhir/ACMEFSHExample/StructureDefinition/MyPatient",
+  "url": "https://fake-acme.org/fhir//StructureDefinition/MyPatient",
   "version": "0.1.0",
   "name": "MyPatient",
   "status": "active",
@@ -46,8 +46,15 @@
   "differential": {
     "element": [
       {
-        "id": "Patient",
-        "path": "Patient"
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "max": "1"
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "max": "1",
+        "mustSupport": true
       }
     ]
   }
