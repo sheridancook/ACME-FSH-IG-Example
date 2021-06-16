@@ -2,14 +2,14 @@
   {
     "id": "acme.fsh.example",
     "type": "ImplementationGuide",
-    "url": "https://fake-acme.org/fhir/ACMEFSHExample/ImplementationGuide/acme.fsh.example",
+    "url": "https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example",
     "version": "0.1.0",
     "name": "ACMEFSHExample"
   },
   {
     "id": "MyPatient",
     "type": "StructureDefinition",
-    "url": "https://fake-acme.org/fhir/ACMEFSHExample/StructureDefinition/MyPatient",
+    "url": "https://fake-acme.org/fhir//StructureDefinition/MyPatient",
     "version": "0.1.0",
     "name": "MyPatient"
   }

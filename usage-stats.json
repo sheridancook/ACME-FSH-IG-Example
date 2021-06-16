@@ -6,7 +6,7 @@
   "profiles": {
     "Patient": [
       {
-        "url": "https://fake-acme.org/fhir/ACMEFSHExample/StructureDefinition/MyPatient",
+        "url": "https://fake-acme.org/fhir//StructureDefinition/MyPatient",
         "title": "MyPatient"
       }
     ]

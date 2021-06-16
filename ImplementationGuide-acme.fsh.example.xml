@@ -3,13 +3,13 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="acme.fsh.example"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ACMEFSHExample</h2><p>The official URL for this implementation guide is: </p><pre>https://fake-acme.org/fhir/ACMEFSHExample/ImplementationGuide/acme.fsh.example</pre></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ACMEFSHExample</h2><p>The official URL for this implementation guide is: </p><pre>https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example</pre></div>
   </text>
-  <url value="https://fake-acme.org/fhir/ACMEFSHExample/ImplementationGuide/acme.fsh.example"/>
+  <url value="https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example"/>
   <version value="0.1.0"/>
   <name value="ACMEFSHExample"/>
   <status value="draft"/>
-  <date value="2021-06-16T19:06:12+00:00"/>
+  <date value="2021-06-16T19:15:30+00:00"/>
   <packageId value="acme.fsh.example"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -88,7 +88,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="https://fake-acme.org/fhir/ACMEFSHExample/history.html"/>
+        <valueString value="https://fake-acme.org/fhir//history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">

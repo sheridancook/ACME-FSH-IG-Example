@@ -145,7 +145,7 @@ It is often used to filter patient lists to exclude inactive patients
 Deceased patients may also be marked as inactive for the same reasons, but may be active for some time after death.","If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.","Need to be able to mark a patient record as not to be used because it was created in error.","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"Patient.active",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","statusCode","n/a","FiveWs.status"
-"Patient.name","","","",1,*,"Y","","Y","HumanName {[]} {[]}
+"Patient.name","","","",1,1,"Y","","Y","HumanName {[]} {[]}
 ","A name associated with the patient","A name associated with the individual.","A patient may have multiple names with different uses or applicable periods. For animals, the name is a ""HumanName"" in the sense that is assigned and used by humans and has the same patterns.","Need to be able to track the patient by multiple names. Examples are your official name and a partner name.","","","","","","","",,,,,"",,,,"Patient.name",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 us-core-8:Patient.name.given or Patient.name.family or both SHALL be present {family.exists() or given.exists()}","Patient.name","n/a","EN (actually, PN)","name",".patient.name","XPN","PID-5, PID-9"
@@ -304,7 +304,7 @@ per-1:If present, start SHALL have a lower value than end {start.hasValue().not(
 integer {[]} {[]}","Whether patient is part of a multiple birth","Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).","Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).","For disambiguation of multiple-birth children, especially relevant where the care provider doesn't meet the patient, such as labs.","","","","","","","",,,,,"",,,,"Patient.multipleBirth[x]",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber","n/a","PID-24 (bool), PID-25 (integer)"
-"Patient.photo","","","",0,*,"","","","Attachment {[]} {[]}
+"Patient.photo","","","",0,1,"Y","","","Attachment {[]} {[]}
 ","Image of the patient","Image of the patient.","Guidelines:
 * Use id photos, not clinical photos.
 * Limit dimensions to thumbnail.

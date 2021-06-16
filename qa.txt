@@ -1,12 +1,12 @@
 ﻿ACMEFSHExample : Validation Results
 =========================================
 
-err = 3, warn = 3, info = 6
+err = 4, warn = 3, info = 6
 IG Publisher Version: 1.1.73
-Generated Wed Jun 16 19:06:23 UTC 2021. FHIR version 4.0.1 for acme.fsh.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACMEFSHExample)
+Generated Wed Jun 16 19:15:39 UTC 2021. FHIR version 4.0.1 for acme.fsh.example#0.1.0 (canonical = https://fake-acme.org/fhir/)
 
  Build Errors : 40 / 2 / 0
- /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-MyPatient : 1 / 1 / 7
 </table>
 == n/a ==
@@ -23,36 +23,37 @@ ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 724, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 822, column 399: The link 'location.html#' for "Location" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 923, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1005, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1055, column 249: The link 'location.html#' for "Location" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1090, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1129, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1166, column 294: The link '' for "ACMEbasePractitioner" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1166, column 410: The link '' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1178, column 151: The link '' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1224, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/p/a at Line 1306, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1006, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1056, column 249: The link 'location.html#' for "Location" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1091, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1130, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1167, column 294: The link '' for "ACMEbasePractitioner" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1167, column 410: The link '' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1179, column 151: The link '' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1225, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/p/a at Line 1307, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-examples.html#/html/body/div/div/div/p/a at Line 233, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-mappings.html#/html/body/div/div/div/p/a at Line 460, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 234, column 44: The link '' for "ACMEbasePatient" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 249, column 44: The link '' for "ACMEbasePatient" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 360, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 360, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 361, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 554, column 44: The link '' for "ACMEbasePatient" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 568, column 44: The link '' for "ACMEbasePatient" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 679, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 680, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/p/a at Line 1046, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 362, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 362, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 363, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 557, column 44: The link '' for "ACMEbasePatient" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 571, column 44: The link '' for "ACMEbasePatient" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 684, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 684, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 685, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/p/a at Line 1051, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.history.html#/html/body/div/div/div/p/a at Line 222, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.json.html#/html/body/div/div/div/p/a at Line 6374, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.ttl.html#/html/body/div/div/div/p/a at Line 5392, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/html/body/div/div/div/p/a at Line 5664, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.json.html#/html/body/div/div/div/p/a at Line 6366, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.ttl.html#/html/body/div/div/div/p/a at Line 5388, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/html/body/div/div/div/p/a at Line 5659, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 171, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 155, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 137, column 28: The link '' for "" cannot be resolved
 == /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example.json ==
+ERROR: ImplementationGuide.where(url = 'https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example'): Conformance resource /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example.json - the canonical URL (https://fake-acme.org/fhir/ImplementationGuide/acme.fsh.example) does not match the URL (https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example)
 INFORMATION: ImplementationGuide/acme.fsh.example: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 == /github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json ==
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
@@ -63,4 +64,4 @@ INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[64].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[78].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 ERROR: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[10].binding: The element Patient.extension has a binding, but no bindable types are present [Extension]
-WARNING: StructureDefinition.where(url = 'https://fake-acme.org/fhir/ACMEFSHExample/StructureDefinition/MyPatient'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://fake-acme.org/fhir//StructureDefinition/MyPatient'): The Implementation Guide contains no examples for this profile
