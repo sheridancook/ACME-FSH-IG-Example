@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "name": "ACMEFSHExample",
   "status": "draft",
-  "date": "2021-06-16T19:22:33+00:00",
+  "date": "2021-06-16T20:29:26+00:00",
   "packageId": "acme.fsh.example",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -286,6 +286,19 @@
         },
         "name": "MyPatient",
         "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/EveAnyperson"
+        },
+        "name": "EveAnyperson",
+        "exampleCanonical": "https://fake-acme.org/fhir//StructureDefinition/MyPatient"
       }
     ],
     "page": {

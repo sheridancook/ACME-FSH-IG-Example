@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="ACMEFSHExample"/>
   <status value="draft"/>
-  <date value="2021-06-16T19:22:33+00:00"/>
+  <date value="2021-06-16T20:29:26+00:00"/>
   <packageId value="acme.fsh.example"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -180,6 +180,16 @@
       </reference>
       <name value="MyPatient"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/EveAnyperson"/>
+      </reference>
+      <name value="EveAnyperson"/>
+      <exampleCanonical value="https://fake-acme.org/fhir//StructureDefinition/MyPatient"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

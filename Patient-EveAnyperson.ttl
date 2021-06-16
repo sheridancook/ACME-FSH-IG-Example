@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fake-acme.org/fhir/Patient/EveAnyperson> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "EveAnyperson"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fake-acme.org/fhir//StructureDefinition/MyPatient";
+       fhir:index 0;
+       fhir:link <https://fake-acme.org/fhir//StructureDefinition/MyPatient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 1032702 (USUAL)</p><p><b>name</b>: Eve Anyperson </p><p><b>gender</b>: female</p></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.system [ fhir:value "https://fake-acme.org/fhir/NamingSystem/Patient-Identifier" ];
+     fhir:Identifier.value [ fhir:value "1032702" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Anyperson" ];
+     fhir:HumanName.given [
+       fhir:value "Eve";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fake-acme.org/fhir/Patient/EveAnyperson.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

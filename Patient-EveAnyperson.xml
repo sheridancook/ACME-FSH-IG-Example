@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="EveAnyperson"/>
+  <meta>
+    <profile value="https://fake-acme.org/fhir//StructureDefinition/MyPatient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: 1032702 (USUAL)</p><p><b>name</b>: Eve Anyperson </p><p><b>gender</b>: female</p></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <system value="https://fake-acme.org/fhir/NamingSystem/Patient-Identifier"/>
+    <value value="1032702"/>
+  </identifier>
+  <name>
+    <family value="Anyperson"/>
+    <given value="Eve"/>
+  </name>
+  <gender value="female"/>
+</Patient>
