@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "name": "MyPatient",
   "status": "active",
-  "date": "2021-06-16T19:15:30+00:00",
+  "date": "2021-06-16T19:19:04+00:00",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

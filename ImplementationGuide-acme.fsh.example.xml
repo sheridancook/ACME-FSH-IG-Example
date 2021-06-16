@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="ACMEFSHExample"/>
   <status value="draft"/>
-  <date value="2021-06-16T19:15:30+00:00"/>
+  <date value="2021-06-16T19:19:04+00:00"/>
   <packageId value="acme.fsh.example"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
