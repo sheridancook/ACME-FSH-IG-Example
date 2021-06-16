@@ -1,12 +1,12 @@
-﻿ACMEFSHExample : Validation Results
+﻿ACMEFSHIGExample : Validation Results
 =========================================
 
 err = 4, warn = 3, info = 6
 IG Publisher Version: 1.1.73
-Generated Wed Jun 16 20:29:38 UTC 2021. FHIR version 4.0.1 for acme.fsh.example#0.1.0 (canonical = https://fake-acme.org/fhir/)
+Generated Wed Jun 16 20:34:51 UTC 2021. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/)
 
  Build Errors : 45 / 3 / 0
- /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-EveAnyperson : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-MyPatient : 1 / 0 / 7
 </table>
@@ -59,9 +59,9 @@ ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 191, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 155, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 137, column 28: The link '' for "" cannot be resolved
-== /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example.json ==
-ERROR: ImplementationGuide.where(url = 'https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example'): Conformance resource /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.example.json - the canonical URL (https://fake-acme.org/fhir/ImplementationGuide/acme.fsh.example) does not match the URL (https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example)
-INFORMATION: ImplementationGuide/acme.fsh.example: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+== /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example.json ==
+ERROR: ImplementationGuide.where(url = 'https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.ig.example'): Conformance resource /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example.json - the canonical URL (https://fake-acme.org/fhir/ImplementationGuide/acme.fsh.ig.example) does not match the URL (https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.ig.example)
+INFORMATION: ImplementationGuide/acme.fsh.ig.example: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 == /github/workspace/fsh-generated/resources/Patient-EveAnyperson.json ==
 INFORMATION: Patient/EveAnyperson: Patient: Validate resource against profile https://fake-acme.org/fhir//StructureDefinition/MyPatient
 == /github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json ==

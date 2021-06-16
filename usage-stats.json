@@ -1,5 +1,5 @@
 {
-  "package": "acme.fsh.example",
+  "package": "acme.fsh.ig.example",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "extensions": [],

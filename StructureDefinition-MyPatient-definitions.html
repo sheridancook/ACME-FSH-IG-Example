@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>ACME.FSH.EXAMPLE\MyPatient - Definitions - FHIR v4.0.1</title>
+    <title>ACME.FSH.IG.EXAMPLE\MyPatient - Definitions - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -101,7 +101,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 4" class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">ACMEFSHExample - Local Development build (v0.1.0). See the <a href="https://fake-acme.org/fhir//history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">ACMEFSHIGExample - Local Development build (v0.1.0). See the <a href="https://fake-acme.org/fhir//history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -308,7 +308,7 @@ Code for sex assigned at birth
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
-  <tr><td>Requirements</td><td><p><a name="5d018f54-4983-4ccd-b0cf-96596b932a16">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
+  <tr><td>Requirements</td><td><p><a name="36efaf09-1a68-40fa-aaa7-a6a9eb2fea9e">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
 </td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content</td></tr>
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
@@ -393,7 +393,7 @@ A coded type for an identifier that can be used to determine which identifier to
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
-  <tr><td>Comments</td><td><p><a name="c837f47d-457e-4a5d-b5f1-2ba3932ef5f7">​</a>If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the <a href="extension-rendered-value.html">Rendered Value extension</a>. Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.</p>
+  <tr><td>Comments</td><td><p><a name="0d663c74-a0e3-4e74-b97c-d60eb6c92e41">​</a>If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the <a href="extension-rendered-value.html">Rendered Value extension</a>. Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.</p>
 </td></tr>
   <tr><td>Example</td><td><br/><b>General</b>:123456
 </td></tr>
@@ -405,7 +405,7 @@ A coded type for an identifier that can be used to determine which identifier to
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td></tr>
   <tr><td>Comments</td><td><p>A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the range applies (e.g. "give to the patient between these two times").</p>
-<p><a name="5103b982-3f1d-46ba-976e-9c256253ccab">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
+<p><a name="211ed07a-4042-447e-8066-8d29f8a6396c">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">per-1</b>: If present, start SHALL have a lower value than end (: start.hasValue().not() or end.hasValue().not() or (start &lt;= end))</td></tr>
@@ -496,7 +496,7 @@ A coded type for an identifier that can be used to determine which identifier to
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1 This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
-  <tr><td>Comments</td><td><p><a name="8fd7f608-e90e-403b-b291-2778e5768b88">​</a>If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the <a href="extension-rendered-value.html">Rendered Value extension</a>. Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.</p>
+  <tr><td>Comments</td><td><p><a name="af7feecb-cb90-455d-ab51-0b0650dd3946">​</a>If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the <a href="extension-rendered-value.html">Rendered Value extension</a>. Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.</p>
 </td></tr>
   <tr><td>Example</td><td><br/><b>General</b>:123456
 </td></tr>
@@ -508,7 +508,7 @@ A coded type for an identifier that can be used to determine which identifier to
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td></tr>
   <tr><td>Comments</td><td><p>A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the range applies (e.g. "give to the patient between these two times").</p>
-<p><a name="19a9edd9-adc6-4e55-bda9-dc60a1b46faf">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
+<p><a name="26b58c7f-f300-48a4-99c3-ba308dac447d">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">per-1</b>: If present, start SHALL have a lower value than end (: start.hasValue().not() or end.hasValue().not() or (start &lt;= end))</td></tr>
@@ -639,7 +639,7 @@ The use of a human name.
   <tr><td>Requirements</td><td><p>Allows names to be placed in historical context.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the range applies (e.g. "give to the patient between these two times").</p>
-<p><a name="44338429-d0a6-4763-b420-6672e5cf5021">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
+<p><a name="157a091f-e2a2-4fd6-ac20-ee8e43452061">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">per-1</b>: If present, start SHALL have a lower value than end (: start.hasValue().not() or end.hasValue().not() or (start &lt;= end))</td></tr>
@@ -727,7 +727,7 @@ Use of contact point.
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td></tr>
   <tr><td>Comments</td><td><p>A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the range applies (e.g. "give to the patient between these two times").</p>
-<p><a name="24db1cdb-cb90-4ff0-a74e-fd7e5eb44bf5">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
+<p><a name="7d79ef96-de8a-4ec6-bdad-1d830a0e38a9">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">per-1</b>: If present, start SHALL have a lower value than end (: start.hasValue().not() or end.hasValue().not() or (start &lt;= end))</td></tr>
@@ -825,7 +825,7 @@ The use of an address.
 The type of an address (physical / postal).
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td></tr>
-  <tr><td>Comments</td><td><p><a name="6b4d5ad1-aec3-4500-8149-74a6082ae45c">​</a>The definition of Address states that "address is intended to describe postal addresses, not physical locations". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the <a href="location.html#">Location</a> resource).</p>
+  <tr><td>Comments</td><td><p><a name="fd8aa41a-ca4f-4364-b28e-0c02f27452da">​</a>The definition of Address states that "address is intended to describe postal addresses, not physical locations". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the <a href="location.html#">Location</a> resource).</p>
 </td></tr>
   <tr><td>Example</td><td><br/><b>General</b>:both
 </td></tr>
@@ -926,7 +926,7 @@ Two Letter USPS alphabetic codes.
   <tr><td>Requirements</td><td><p>Allows addresses to be placed in historical context.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the range applies (e.g. "give to the patient between these two times").</p>
-<p><a name="10519640-d4f9-4290-b9d3-01325a61d322">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
+<p><a name="55a254bc-4c4f-4666-a52f-8768e9538c77">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
 </td></tr>
   <tr><td>Example</td><td><br/><b>General</b>:&lt;valuePeriod&nbsp;xmlns="http://hl7.org/fhir"&gt;<br/>&nbsp;&nbsp;&lt;start&nbsp;value="2010-03-23"/&gt;<br/>&nbsp;&nbsp;&lt;end&nbsp;value="2010-07-01"/&gt;<br/>&lt;/valuePeriod&gt;<br/>
 </td></tr>
@@ -1009,7 +1009,7 @@ The domestic partnership status of a person.
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
-  <tr><td>Requirements</td><td><p><a name="dc5c505e-0c15-49f5-bced-61e6916ce4dd">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
+  <tr><td>Requirements</td><td><p><a name="a0c03777-1d09-47cd-a6c3-67c147ab3f49">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
 </td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
@@ -1059,7 +1059,7 @@ The nature of the relationship between a patient and a contact person for that p
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a></td></tr>
   <tr><td>Requirements</td><td><p>Need to keep track where the contact person can be contacted per postal mail or visited.</p>
 </td></tr>
-  <tr><td>Comments</td><td><p><a name="dafb6c3d-100a-4e26-b267-7939e8eaaff0">​</a>Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the <a href="location.html#">Location</a> resource).</p>
+  <tr><td>Comments</td><td><p><a name="6cb0a02c-b7c5-420b-bfdd-592d01eb33e8">​</a>Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the <a href="location.html#">Location</a> resource).</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
@@ -1094,7 +1094,7 @@ The gender of a person used for administrative purposes.
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td></tr>
   <tr><td>Comments</td><td><p>A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the range applies (e.g. "give to the patient between these two times").</p>
-<p><a name="0c2880c9-6f7f-4f83-89c1-120526de2fce">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
+<p><a name="d0f19f58-a179-4d0d-80d7-889701a1de49">​</a>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">per-1</b>: If present, start SHALL have a lower value than end (: start.hasValue().not() or end.hasValue().not() or (start &lt;= end))</td></tr>
@@ -1133,7 +1133,7 @@ The gender of a person used for administrative purposes.
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
-  <tr><td>Requirements</td><td><p><a name="088c459c-4aec-4144-8fa5-a08791df1604">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
+  <tr><td>Requirements</td><td><p><a name="4accdd5c-b00a-49ec-ab58-0749471bee50">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
 </td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
@@ -1170,7 +1170,7 @@ A human language.
   <tr><td>Definition</td><td><p>Patient's nominated care provider.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="9759fa85-fba2-4823-87e4-de0f94f66031">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="http://hl7.org/fhir/R4/practitionerrole.html" title="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a> | <a href="null" title="https://fake-acme.org/fhir/StructureDefinition/ACME-base-practitioner">ACMEbasePractitioner</a> | <a href="null" title="https://fake-acme.org/fhir/StructureDefinition/ACME-base-organization">ACMEbaseOrganization</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="1da8c023-35ad-4440-ab29-6a07f45c2e58">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="http://hl7.org/fhir/R4/practitionerrole.html" title="http://hl7.org/fhir/StructureDefinition/PractitionerRole">PractitionerRole</a> | <a href="null" title="https://fake-acme.org/fhir/StructureDefinition/ACME-base-practitioner">ACMEbasePractitioner</a> | <a href="null" title="https://fake-acme.org/fhir/StructureDefinition/ACME-base-organization">ACMEbaseOrganization</a>)</td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>careProvider</td></tr>
   <tr><td>Comments</td><td><p>This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles.  It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.
 Multiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a "fly-in/fly-out" worker that has the onsite GP also included with his home GP to remain aware of medical issues.</p>
@@ -1182,7 +1182,7 @@ Multiple GPs may be recorded against the patient for various reasons, such as a 
   <tr><td>Definition</td><td><p>Organization that is the custodian of the patient record.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1 This element is affected by the following invariants: ele-1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="e6092d9f-c80d-4438-9fd3-5dd73c5a6f9e">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="null" title="https://fake-acme.org/fhir/StructureDefinition/ACME-base-organization">ACMEbaseOrganization</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="263ec975-0d4c-4fc7-9bd5-246911e903ac">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="null" title="https://fake-acme.org/fhir/StructureDefinition/ACME-base-organization">ACMEbaseOrganization</a>)</td></tr>
   <tr><td>Requirements</td><td><p>Need to know who recognizes this patient record, manages and updates it.</p>
 </td></tr>
   <tr><td>Comments</td><td><p>There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).</p>
@@ -1228,7 +1228,7 @@ Multiple GPs may be recorded against the patient for various reasons, such as a 
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..* This element is affected by the following invariants: ele-1</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>true</td></tr>
-  <tr><td>Requirements</td><td><p><a name="2053762b-af3c-40df-8903-ccf00e96874e">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
+  <tr><td>Requirements</td><td><p><a name="9313c7ac-d21c-44fa-84c2-a983a692e074">​</a>Modifier extensions allow for extensions that <em>cannot</em> be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the <a href="extensibility.html#modifierExtension">definition of modifier extensions</a>.</p>
 </td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>extensions, user content, modifiers</td></tr>
   <tr><td>Comments</td><td><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
@@ -1309,8 +1309,8 @@ The type of link between this patient resource and another patient resource.
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="aff7256f-3511-4c5d-8707-8b5e039444c2">​</a>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package acme.fsh.example#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 16, 2021 20:29+0000">2021-06-16</span>
+        <p><a name="ec046d24-22e0-4ba3-bbf1-73d8c5d156f2">​</a>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="null"></a>.  Package acme.fsh.ig.example#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jun 16, 2021 20:34+0000">2021-06-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

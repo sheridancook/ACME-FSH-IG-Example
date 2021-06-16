@@ -1,10 +1,10 @@
 [
   {
-    "id": "acme.fsh.example",
+    "id": "acme.fsh.ig.example",
     "type": "ImplementationGuide",
-    "url": "https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example",
+    "url": "https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.ig.example",
     "version": "0.1.0",
-    "name": "ACMEFSHExample"
+    "name": "ACMEFSHIGExample"
   },
   {
     "id": "MyPatient",

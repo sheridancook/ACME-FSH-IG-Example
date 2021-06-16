@@ -1,16 +1,16 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "acme.fsh.example",
+  "id": "acme.fsh.ig.example",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ACMEFSHExample</h2><p>The official URL for this implementation guide is: </p><pre>https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ACMEFSHIGExample</h2><p>The official URL for this implementation guide is: </p><pre>https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.ig.example</pre></div>"
   },
-  "url": "https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.example",
+  "url": "https://fake-acme.org/fhir//ImplementationGuide/acme.fsh.ig.example",
   "version": "0.1.0",
-  "name": "ACMEFSHExample",
+  "name": "ACMEFSHIGExample",
   "status": "draft",
-  "date": "2021-06-16T20:29:26+00:00",
-  "packageId": "acme.fsh.example",
+  "date": "2021-06-16T20:34:42+00:00",
+  "packageId": "acme.fsh.ig.example",
   "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
