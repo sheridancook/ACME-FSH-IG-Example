@@ -1,6 +1,6 @@
 # FHIR Shorthand and IG Publisher example repository
 
-[![FHIR Project on Simplifier.net](https://img.shields.io/badge/FHIR_project_on_Simplifier.net-ACME--FSH--IG--Example-green)](https://simplifier.net/ACME-FSH-IG-Example) [![Firely Validation](https://github.com/wardweistra/ACME-FSH-IG-Example/actions/workflows/main.yml/badge.svg)](https://github.com/wardweistra/ACME-FSH-IG-Example/actions/workflows/main.yml)
+[![FHIR Project on Simplifier.net](https://img.shields.io/badge/FHIR_project_on_Simplifier.net-ACME--FSH--IG--Example-green)](https://simplifier.net/ACME-FSH-IG-Example) [![Firely Validation](https://github.com/FirelyTeam/ACME-FSH-IG-Example/actions/workflows/main.yml/badge.svg)](https://github.com/FirelyTeam/ACME-FSH-IG-Example/actions/workflows/main.yml)
 
 An Example FHIR project repository, showcasing the use of FHIR Shorthand/sushi and the IG Publisher with Simplifier.net and Firely Terminal.
 
@@ -12,4 +12,4 @@ The template repository can be connected to a [Simplifier.net](http://simplifier
 
 ## Publishing of IG Publisher on GitHub Pages
 
-The Implementation Guide built from this project is also published on every commit on [our repository's GitHub Pages](https://wardweistra.github.io/ACME-FSH-IG-Example/), as taken from [this Tutorial IG](https://github.com/hl7-be/tutorial_ig).
+The Implementation Guide built from this project is also published on every commit on [our repository's GitHub Pages](https://FirelyTeam.github.io/ACME-FSH-IG-Example/), as taken from [this Tutorial IG](https://github.com/hl7-be/tutorial_ig).
