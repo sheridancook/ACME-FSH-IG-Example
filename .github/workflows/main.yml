@@ -43,7 +43,7 @@ jobs:
         with:
           PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
           # PATH_TO_EXAMPLES: Examples
-          DOTNET_VALIDATION_ENABLED: true
+          DOTNET_VALIDATION_ENABLED: false
           JAVA_VALIDATION_ENABLED: true
           PATH_TO_QUALITY_CONTROL_RULES: acme
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
