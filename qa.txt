@@ -3,7 +3,7 @@
 
 err = 3, warn = 3, info = 6
 IG Publisher Version: 1.1.96
-Generated Mon Jan 17 20:02:11 UTC 2022. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACME-FSH-IG-Example)
+Generated Mon Jan 17 20:09:21 UTC 2022. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACME-FSH-IG-Example)
  Build Errors : 31 / 3 / 0
  /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-EveAnyperson : 0 / 0 / 1
@@ -26,21 +26,21 @@ ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/p/a at Line 1317, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-examples.html#/html/body/div/div/div/p/a at Line 254, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-mappings.html#/html/body/div/div/div/p/a at Line 470, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 244, column 44: The link '' for "ACMEbasePatient" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 259, column 44: The link '' for "ACMEbasePatient" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 372, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 372, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 373, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 567, column 44: The link '' for "ACMEbasePatient" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 581, column 44: The link '' for "ACMEbasePatient" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 694, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 694, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 695, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/p/a at Line 1061, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 245, column 44: The link '' for "ACMEbasePatient" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 260, column 44: The link '' for "ACMEbasePatient" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 373, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 373, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 374, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 568, column 44: The link '' for "ACMEbasePatient" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/p/a at Line 582, column 44: The link '' for "ACMEbasePatient" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 695, column 1580: The link 'unknown.html' for "ACMEbasePractitioner" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 695, column 1630: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 696, column 1666: The link 'unknown.html' for "ACMEbaseOrganization" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.html#/html/body/div/div/div/p/a at Line 1062, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.history.html#/html/body/div/div/div/p/a at Line 232, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.json.html#/html/body/div/div/div/p/a at Line 6376, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.ttl.html#/html/body/div/div/div/p/a at Line 5398, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/html/body/div/div/div/p/a at Line 5670, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.json.html#/html/body/div/div/div/p/a at Line 6377, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.ttl.html#/html/body/div/div/div/p/a at Line 5399, column 28: The link '' for "" cannot be resolved
+ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/html/body/div/div/div/p/a at Line 5671, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 191, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 155, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 137, column 28: The link '' for "" cannot be resolved

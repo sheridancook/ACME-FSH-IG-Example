@@ -9,7 +9,8 @@
   "version": "0.1.0",
   "name": "MyPatient",
   "status": "active",
-  "date": "2022-01-17T20:01:56+00:00",
+  "date": "2022-01-17T20:09:00+00:00",
+  "publisher": "ACME Corp",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
