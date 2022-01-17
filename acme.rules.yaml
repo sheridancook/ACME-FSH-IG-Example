@@ -1,3 +1,7 @@
+- name: validate
+  action: validate
+  filter: ImplementationGuide.exists().not()
+
 - name: canonical-starts-with
   filter: url.exists() and ImplementationGuide.exists().not()
   # Excluding IGs for now, since they have a Simplifier.net canonical
