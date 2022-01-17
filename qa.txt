@@ -2,10 +2,9 @@
 =========================================
 
 err = 3, warn = 3, info = 6
-IG Publisher Version: 1.1.76
-Generated Thu Jul 15 08:28:05 UTC 2021. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACME-FSH-IG-Example)
-
- Build Errors : 45 / 3 / 0
+IG Publisher Version: 1.1.96
+Generated Mon Jan 17 19:30:43 UTC 2022. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACME-FSH-IG-Example)
+ Build Errors : 31 / 3 / 0
  /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-EveAnyperson : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-MyPatient : 1 / 0 / 7
@@ -21,23 +20,9 @@ ERROR: /github/workspace/output/Patient-EveAnyperson.html#/html/body/div/div/div
 ERROR: /github/workspace/output/Patient-EveAnyperson.json.html#/html/body/div/div/div/p/a at Line 217, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/Patient-EveAnyperson.ttl.html#/html/body/div/div/div/p/a at Line 230, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/Patient-EveAnyperson.xml.html#/html/body/div/div/div/p/a at Line 210, column 28: The link '' for "" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 315, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 400, column 339: The link 'extension-rendered-value.html' for "Rendered Value extension" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 412, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 503, column 339: The link 'extension-rendered-value.html' for "Rendered Value extension" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 515, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 646, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 734, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 832, column 399: The link 'location.html#' for "Location" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 933, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1016, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1066, column 249: The link 'location.html#' for "Location" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1101, column 72: The link 'datatypes.html#Duration' for "Duration" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1140, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1177, column 294: The link '' for "ACMEbasePractitioner" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1177, column 410: The link '' for "ACMEbaseOrganization" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1189, column 151: The link '' for "ACMEbaseOrganization" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 1235, column 357: The link 'extensibility.html#modifierExtension' for "definition of modifier extensions" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-definitions.html#/html/body/div/div/div/p/a at Line 1317, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-examples.html#/html/body/div/div/div/p/a at Line 254, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/StructureDefinition-MyPatient-mappings.html#/html/body/div/div/div/p/a at Line 470, column 28: The link '' for "" cannot be resolved
@@ -59,9 +44,9 @@ ERROR: /github/workspace/output/StructureDefinition-MyPatient.profile.xml.html#/
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 191, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 155, column 28: The link '' for "" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 137, column 28: The link '' for "" cannot be resolved
-== /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example.json ==
-== /github/workspace/fsh-generated/resources/Patient-EveAnyperson.json ==
-== /github/workspace/fsh-generated/resources/StructureDefinition-MyPatient.json ==
+== fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example.json ==
+== fsh-generated/resources/Patient-EveAnyperson.json ==
+== fsh-generated/resources/StructureDefinition-MyPatient.json ==
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[19].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[28].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/MyPatient: StructureDefinition.snapshot.element[40].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
