@@ -3,7 +3,7 @@
 
 err = 3, warn = 3, info = 6
 IG Publisher Version: 1.1.96
-Generated Mon Jan 17 19:58:10 UTC 2022. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACME-FSH-IG-Example)
+Generated Mon Jan 17 20:02:11 UTC 2022. FHIR version 4.0.1 for acme.fsh.ig.example#0.1.0 (canonical = https://fake-acme.org/fhir/ACME-FSH-IG-Example)
  Build Errors : 31 / 3 / 0
  /github/workspace/fsh-generated/resources/ImplementationGuide-acme.fsh.ig.example : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-EveAnyperson : 0 / 0 / 1
