@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "name": "MyPatient",
   "status": "active",
-  "date": "2022-01-26T09:51:13+00:00",
+  "date": "2022-09-22T17:58:02+00:00",
   "publisher": "ACME Corp",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -156,7 +156,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
