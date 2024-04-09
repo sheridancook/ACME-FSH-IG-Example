@@ -1,0 +1,124 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BundlePSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+  "name": "BundlePSAB",
+  "title": "Bundle (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Bundle resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Bundle profile and refines constraints applied to the Bundle resource by the PS-CA project to include hard constraints (invariants) than enforce what sections and resource elements are allowed to be present in an Alberta Patient Summary. These have been applied at the Bundle level as an alternative to forbidding elements through 0..0 cardinality - to balance the need for mechanical validation on Patient Summary against the re-use of clinical FHIR profiles under different contexts.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/bundle-ca-ps",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle",
+        "path": "Bundle",
+        "constraint": [
+          {
+            "key": "psab-bdl-pat-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following Patient details SHALL NOT be present: text, active, name.period, address.text, maritalStatus, multipleBirth, photo, contact.address, contact.gender, contact.organization, contact.period, communication, generalPractitioner, managingOrganization",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is Patient).resource.where(text.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(active.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(name.period.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(address.text.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(maritalStatus.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(multipleBirth.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(photo.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(contact.address.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(contact.gender.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(contact.organization.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(contact.period.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(communication.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(generalPractitioner.exists()).exists().not() and Bundle.entry.where(resource is Patient).resource.where(managingOrganization.exists()).exists().not()"
+          },
+          {
+            "key": "psab-bdl-pra-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following Practitioner details SHALL NOT be present: name period, photo, and qualification",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is Practitioner).resource.where(name.period.exists()).exists().not() and Bundle.entry.where(resource is Practitioner).resource.where(photo.exists()).exists().not() and Bundle.entry.where(resource is Practitioner).resource.where(qualification.exists()).exists().not()"
+          },
+          {
+            "key": "psab-bdl-loc-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB then the following Location details SHALL NOT be present: telecom.use, position, and endpoint",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is Location).resource.where(telecom.use.exists()).exists().not() and Bundle.entry.where(resource is Location).resource.where(position.exists()).exists().not() and Bundle.entry.where(resource is Location).resource.where(endpoint.exists()).exists().not()"
+          },
+          {
+            "key": "psab-bdl-prr-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following PractitionerRole details SHALL NOT be present: endpoint",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is PractitionerRole).resource.where(endpoint.exists()).exists().not()"
+          },
+          {
+            "key": "psab-bdl-mes-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following MedicationStatement details SHALL NOT be present: statusReason, context, dateAsserted, informationSource, derivedFrom, reasonReference, dosage.site, dosage.method, dosage.doseAndRate.type, dosage.doseAndRate.rate[x], dosage.maxDosePerPeriod, dosage.maxDosePerAdministration, dosage.maxDosePerLifetime",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is MedicationStatement).resource.where(statusReason.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(context.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dateAsserted.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(informationSource.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(derivedFrom.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(reasonReference.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dosage.site.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dosage.method.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dosage.doseAndRate.type.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dosage.maxDosePerPeriod.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dosage.maxDosePerAdministration.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dosage.maxDosePerLifetime.exists()).exists().not() and Bundle.entry.where(resource is MedicationStatement).resource.where(dosage.doseAndRate.rate.exists()).exists().not()"
+          },
+          {
+            "key": "psab-bdl-ait-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following AllergyIntolerance details SHALL NOT be present: verificationStatus, encounter, asserter",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is AllergyIntolerance).resource.where(verificationStatus.exists()).exists().not() and Bundle.entry.where(resource is AllergyIntolerance).resource.where(encounter.exists()).exists().not() and Bundle.entry.where(resource is AllergyIntolerance).resource.where(asserter.exists()).exists().not()"
+          },
+          {
+            "key": "psab-bdl-con-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following Condition details SHALL NOT be present: verificationStatus, severity, encounter, abatement, recorder, asserter, stage, evidence",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is Condition).resource.where(verificationStatus.exists()).exists().not() and Bundle.entry.where(resource is Condition).resource.where(severity.exists()).exists().not() and Bundle.entry.where(resource is Condition).resource.where(encounter.exists()).exists().not() and Bundle.entry.where(resource is Condition).resource.where(abatement.exists()).exists().not() and Bundle.entry.where(resource is Condition).resource.where(recorder.exists()).exists().not() and Bundle.entry.where(resource is Condition).resource.where(asserter.exists()).exists().not() and Bundle.entry.where(resource is Condition).resource.where(stage.exists()).exists().not() and Bundle.entry.where(resource is Condition).resource.where(evidence.exists()).exists().not()"
+          },
+          {
+            "key": "psab-bdl-obs-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following vital sign observations SHALL NOT be present: body temperature, heart rate, oxygen saturation, respiratory rate, vital signs panel",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is Observation).resource.where(code.coding.code = '8310-5').exists().not() and Bundle.entry.where(resource is Observation).resource.where(code.coding.code = '8867-4').exists().not() and Bundle.entry.where(resource is Observation).resource.where(code.coding.code = '2708-6').exists().not() and Bundle.entry.where(resource is Observation).resource.where(code.coding.code = '9279-1').exists().not() and Bundle.entry.where(resource is Observation).resource.where(code.coding.code = '85353-1').exists().not()"
+          },
+          {
+            "key": "psab-bdl-obs-vs-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following vital sign observation details SHALL NOT be present: basedOn, partOf, category.extension, category.coding.extension, code.extension, focus, encounter, issued, value.extension, and dataAbsentReason.",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is Observation).resource.where((basedOn or partOf or category.extension or category.coding.extension or code.extension or focus or encounter or issued or value.extension or dataAbsentReason) and category.coding.code = 'vital-signs').exists().not()"
+          },
+          {
+            "key": "psab-bdl-obs-sh-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following social history observation details SHALL NOT be present: basedOn, partOf, focus, encounter, hasMember, and derivedFrom",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is Observation).resource.where((basedOn or partOf or focus or encounter or hasMember or derivedFrom) and category.coding.code = 'social-history').exists().not()"
+          },
+          {
+            "key": "psab-bdl-fhs-1",
+            "human": "If Bundle.Composition.title is Patient Summary - AB, then the following FamilyMemberHistory details SHALL NOT be present: dataAbsentReason, date, name, sex, born[x], age[x], estimatedAge, deceased[x], reasonCode, reasonReference",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB",
+            "severity": "error",
+            "expression": "Bundle.entry.where(resource is Composition).resource.where(title = 'Patient Summary - AB') implies Bundle.entry.where(resource is FamilyMemberHistory).resource.where(dataAbsentReason.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(name.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(sex.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(born.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(age.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(estimatedAge.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(deceased.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(reasonCode.exists()).exists().not() and Bundle.entry.where(resource is FamilyMemberHistory).resource.where(reasonReference.exists()).exists().not()"
+          }
+        ]
+      }
+    ]
+  }
+}

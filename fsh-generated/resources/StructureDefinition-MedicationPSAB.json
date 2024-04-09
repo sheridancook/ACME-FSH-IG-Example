@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MedicationPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/MedicationPSAB",
+  "name": "MedicationPSAB",
+  "title": "Medication (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Medication resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Medication profile and refines the constraints that represent the minimum expectations for the Medication resource when used in the PS-AB MedicationStatement profile",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/medication-ca-ps",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication.code.coding",
+        "path": "Medication.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Medication.code.coding:CCDD",
+        "path": "Medication.code.coding",
+        "sliceName": "CCDD",
+        "comment": "Optional - submit if available [Note: Not always recorded in patient chart; and not always applicable - compound medications do not have a DIN number for example.] Reference: Health Canada Drug ID Number",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:CCDD.system",
+        "path": "Medication.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/hc-CCDD"
+      },
+      {
+        "id": "Medication.code.text",
+        "path": "Medication.code.text",
+        "comment": "Mandatory if any prescribed medication data is present; otherwise must be blank/null. String: Max Character length (200)",
+        "min": 1
+      },
+      {
+        "id": "Medication.form.coding",
+        "path": "Medication.form.coding",
+        "comment": "No terminology has been defined in AB for this element. Future releases may include defined terminology"
+      }
+    ]
+  }
+}

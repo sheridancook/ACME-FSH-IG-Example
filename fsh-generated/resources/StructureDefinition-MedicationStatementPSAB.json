@@ -1,0 +1,112 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MedicationStatementPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/MedicationStatementPSAB",
+  "name": "MedicationStatementPSAB",
+  "title": "MedicationStatement (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR MedicationStatement resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA MedicationStatement profile and refines constraints that represent the minimum expectations for the MedicationStatement resource when used in the PS-AB Composition profile.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationStatement",
+  "baseDefinition": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/medicationstatement-ca-ps",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationStatement",
+        "path": "MedicationStatement",
+        "comment": "MedicationStatement resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following MedicationStatement details: statusReason,  context, dateAsserted, informationSource, derivedFrom, reasonReference, dosage.site, dosage.method, dosage.doseAndRate.type,dosage. doseAndRate.rate[x], dosage.maxDosePerPeriod, dosage.maxDosePerAdministration, dosage.maxDosePerLifetime. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "MedicationStatement.status",
+        "path": "MedicationStatement.status",
+        "patternCode": "unknown"
+      },
+      {
+        "id": "MedicationStatement.medication[x]:medicationReference",
+        "path": "MedicationStatement.medication[x]",
+        "sliceName": "medicationReference",
+        "sliceIsConstraining": true,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/MedicationPSAB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept",
+        "path": "MedicationStatement.medication[x]",
+        "sliceName": "medicationCodeableConcept",
+        "sliceIsConstraining": true,
+        "comment": "Supply of medicationReference is preferred over medicationCodeableConcept, however both are allowed in the context of Alberta Patient Summaries",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/CodeableConcept-ca-ps"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.subject",
+        "path": "MedicationStatement.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PatientPSAB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.effective[x]",
+        "path": "MedicationStatement.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement.effective[x]:effectiveDateTime",
+        "path": "MedicationStatement.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "comment": "YYYY-MM-DD format. Partial dates (YYYY only or YYYY-MM only) are accepted. Required for each submitted medication",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.dosage.text",
+        "path": "MedicationStatement.dosage.text",
+        "comment": "since the dosage.doseAndrate does not accommodate any text, Amount of medication per dose could be recorded here"
+      },
+      {
+        "id": "MedicationStatement.dosage.route.text",
+        "path": "MedicationStatement.dosage.route.text",
+        "comment": "Optional String: Max Character length (20) [May be full text name (e.g., by mouth) or abbreviation (e.g., PO); as well as non-standardized text] \n Include a 'recommended reference set' for common values, and allow other content as well? (i.e., not validated, but promoting/encouraging usage of standard values)"
+      },
+      {
+        "id": "MedicationStatement.dosage.doseAndRate",
+        "path": "MedicationStatement.dosage.doseAndRate",
+        "comment": "If the dose is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated dose, or captured with a new MedicationRequest with the new dose."
+      }
+    ]
+  }
+}

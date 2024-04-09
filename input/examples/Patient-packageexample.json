@@ -1,0 +1,25 @@
+{
+        "resourceType": "Patient",
+        "id": "d520ecd1-76a0-4894-b895-b8a5a971954e",
+        "meta": {
+          "profile": [
+            "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/patient-ca-ps"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://first-system-uri.ca",
+            "value": "570191"
+          }
+        ],
+        "name": [
+          {
+            "text": "Roberta Gray",
+            "family": "Gray",
+            "given": [
+              "Roberta"
+            ]
+          }
+        ],
+        "birthDate": "1961-07-23"
+      }

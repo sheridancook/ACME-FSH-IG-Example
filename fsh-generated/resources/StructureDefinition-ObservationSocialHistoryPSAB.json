@@ -1,0 +1,177 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ObservationSocialHistoryPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/ObservationSocialHistoryPSAB",
+  "name": "ObservationSocialHistoryPSAB",
+  "title": "Social History Observation (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Observation (Social History) resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Social History (General) profile and refines constraints applied to the Observation (Social History) resource when used in the PS-AB Composition profile.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/observation-socialhistory-ca-ps",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "comment": "Observation (Social History) resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following Observation details: basedOn, partOf, focus, encounter, hasMember, and derivedFrom. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "Observation.category:social-history",
+        "path": "Observation.category",
+        "sliceName": "social-history",
+        "sliceIsConstraining": true
+      },
+      {
+        "id": "Observation.category:social-history.coding",
+        "path": "Observation.category.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:social-history.coding.system",
+        "path": "Observation.category.coding.system",
+        "comment": "Fixed system value of 'http://terminology.hl7.org/CodeSystem/observation-category'",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:social-history.coding.code",
+        "path": "Observation.category.coding.code",
+        "comment": "Fixed code value of 'social-history'",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.text",
+        "path": "Observation.code.text",
+        "comment": "Text string describing the risk factor or type of observation",
+        "min": 1
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PatientPSAB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "comment": "Required for each lifestyle factor submitted. YYYY-MM-DD format. Partial dates (YYYY only or YYYY-MM only) are accepted.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "comment": "YYYY-MM-DDThh:mm:ss[+|-]ZZ:ZZ  e.g.,: 1980-05-31T12:23:12-05:00",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PractitionerRolePSAB",
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PractitionerPSAB",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/CareTeam",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.value[x]:valueString",
+        "path": "Observation.value[x]",
+        "sliceName": "valueString",
+        "comment": "If value is populated (desired over note), it is expected to be populated in string format",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "short": "Lifestyle Risk Factor Notes"
+      }
+    ]
+  }
+}

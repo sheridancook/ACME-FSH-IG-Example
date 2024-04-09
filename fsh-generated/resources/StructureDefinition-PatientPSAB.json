@@ -1,0 +1,163 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PatientPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/PatientPSAB",
+  "name": "PatientPSAB",
+  "title": "Patient (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Patient resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Patient profile and refines constraints applied to the Patient resource by the PS-CA project to represent the minimum expectations for the Patient resource when used in the PS-AB Composition profile or in one of the referred resources.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/patient-ca-ps",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "comment": "Patient resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following Patient details: text, active, name.period, address.text, maritalStatus, multipleBirth, photo, contact.address, contact.gender, contact.organization, contact.period, communication, generalPractitioner, managingOrganization. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "min": 1
+      },
+      {
+        "id": "Patient.extension:individual-recordedSexOrGender",
+        "path": "Patient.extension",
+        "sliceName": "individual-recordedSexOrGender",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier:JHN",
+        "path": "Patient.identifier",
+        "sliceName": "JHN",
+        "sliceIsConstraining": true,
+        "comment": "Patients must have at least an AB ULI identifier or another provincial JHN identifier. Implementers supplying ULIs shall use identifier.system of https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name.text",
+        "path": "Patient.name.text",
+        "comment": "Mandatory String: Max Character length: 200",
+        "min": 1
+      },
+      {
+        "id": "Patient.name.family",
+        "path": "Patient.name.family",
+        "min": 1
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.telecom:Phone",
+        "path": "Patient.telecom",
+        "sliceName": "Phone",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Patient.telecom:Phone.system",
+        "path": "Patient.telecom.system",
+        "min": 1,
+        "fixedCode": "phone"
+      },
+      {
+        "id": "Patient.gender.extension",
+        "path": "Patient.gender.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Patient.gender.extension:data-absent-reason",
+        "path": "Patient.gender.extension",
+        "sliceName": "data-absent-reason",
+        "short": "element absence reason",
+        "definition": "Provides a reason why the element is missing.",
+        "comment": "Alberta Patient Summaries are not permitted to have a value outside of data absent reason for the gender element, given that recorded gender is to be conveyed in the individual-recordedSexOrGender extension to account for additional values in use in Alberta. Implementers are expected to demonstrate they can supply a 'not-permitted' value for this context",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address.use",
+        "path": "Patient.address.use",
+        "comment": "Assumed to be current home address if Address is present but no Use value is provided"
+      },
+      {
+        "id": "Patient.address.type",
+        "path": "Patient.address.type",
+        "comment": "Valid values: postal / physical / both. Assumed to be 'both' if no value is provided"
+      },
+      {
+        "id": "Patient.address.line",
+        "path": "Patient.address.line",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.city",
+        "path": "Patient.address.city",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.state",
+        "path": "Patient.address.state",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.postalCode",
+        "path": "Patient.address.postalCode",
+        "min": 1
+      },
+      {
+        "id": "Patient.contact.name",
+        "path": "Patient.contact.name",
+        "min": 1
+      }
+    ]
+  }
+}

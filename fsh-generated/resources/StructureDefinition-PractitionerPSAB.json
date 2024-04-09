@@ -1,0 +1,107 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PractitionerPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/PractitionerPSAB",
+  "name": "PractitionerPSAB",
+  "title": "Practitioner (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Practitioner resource for use in Alberta Patient Summaries (PS-AB). It includes constraints that represent the minimum expectations for the Practitioner resource when used in the PS-AB Composition profile or in one of the referred resources.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Practitioner",
+        "path": "Practitioner",
+        "comment": "Practitioner resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following Practitioner details: name period, photo, and qualification. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "Practitioner.identifier",
+        "path": "Practitioner.identifier",
+        "comment": "Identifier is mandatory to support for Practitioners acting as authors for Patient Summaries in Alberta",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.identifier.type",
+        "path": "Practitioner.identifier.type",
+        "comment": "Identifier type is mandatory for each identifier supplied for authoring practitioners. Initial list of types to be supported from Reference set: Provider Identifier Type Codes: Practitioner ID (issued by AH), CPSA ID, CRNA ID, HSPID, CC ID (Connect Care).",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.system",
+        "path": "Practitioner.identifier.system",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.value",
+        "path": "Practitioner.identifier.value",
+        "comment": "Max length: 20 characters; Allowed characters: Number, alphabetic (upper or lower case), space, hyphen",
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.assigner",
+        "path": "Practitioner.identifier.assigner",
+        "comment": "Identifier assigner is mandatory for each identifier supplied. Initial list of assigner values to be supported can be found in the Reference set: Provider Identifier Issuing Authority Codes",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.identifier.assigner.display",
+        "path": "Practitioner.identifier.assigner.display",
+        "comment": "Systems may use reference.display to provide the assigner information as a string value matching the supplied Reference set: Provider Identifier Issuing Authority Codes"
+      },
+      {
+        "id": "Practitioner.name",
+        "path": "Practitioner.name",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.name.text",
+        "path": "Practitioner.name.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.family",
+        "path": "Practitioner.name.family",
+        "comment": "Max length: 75 characters",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Practitioner.name.given",
+        "path": "Practitioner.name.given",
+        "comment": "First name is mandatory; Middle name is optional; Max length: 75 characters",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

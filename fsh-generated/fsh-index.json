@@ -1,0 +1,146 @@
+[
+  {
+    "outputFile": "StructureDefinition-AllergyIntolerancePSAB.json",
+    "fshName": "AllergyIntolerancePSAB",
+    "fshType": "Profile",
+    "fshFile": "AllergyIntolerancePSAB.fsh",
+    "startLine": 3,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-BundlePSAB.json",
+    "fshName": "BundlePSAB",
+    "fshType": "Profile",
+    "fshFile": "BundlePSAB.fsh",
+    "startLine": 3,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-CompositionPSAB.json",
+    "fshName": "CompositionPSAB",
+    "fshType": "Profile",
+    "fshFile": "CompositionPSAB.fsh",
+    "startLine": 6,
+    "endLine": 92
+  },
+  {
+    "outputFile": "StructureDefinition-ConditionPSAB.json",
+    "fshName": "ConditionPSAB",
+    "fshType": "Profile",
+    "fshFile": "ConditionPSAB.fsh",
+    "startLine": 4,
+    "endLine": 36
+  },
+  {
+    "outputFile": "StructureDefinition-FamilyMemberHistoryPSAB.json",
+    "fshName": "FamilyMemberHistoryPSAB",
+    "fshType": "Profile",
+    "fshFile": "FamilyMemberHistoryPSAB.fsh",
+    "startLine": 3,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-HealthcareServicePSAB.json",
+    "fshName": "HealthcareServicePSAB",
+    "fshType": "Profile",
+    "fshFile": "HealthcareServicePSAB.fsh",
+    "startLine": 2,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-LocationPSAB.json",
+    "fshName": "LocationPSAB",
+    "fshType": "Profile",
+    "fshFile": "LocationPSAB.fsh",
+    "startLine": 5,
+    "endLine": 45
+  },
+  {
+    "outputFile": "StructureDefinition-MedicationPSAB.json",
+    "fshName": "MedicationPSAB",
+    "fshType": "Profile",
+    "fshFile": "MedicationPSAB.fsh",
+    "startLine": 3,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-MedicationStatementPSAB.json",
+    "fshName": "MedicationStatementPSAB",
+    "fshType": "Profile",
+    "fshFile": "MedicationStatementPSAB.fsh",
+    "startLine": 4,
+    "endLine": 40
+  },
+  {
+    "outputFile": "StructureDefinition-ObservationBMIPSAB.json",
+    "fshName": "ObservationBMIPSAB",
+    "fshType": "Profile",
+    "fshFile": "ObservationBMIPSAB.fsh",
+    "startLine": 3,
+    "endLine": 45
+  },
+  {
+    "outputFile": "StructureDefinition-ObservationBodyHeightPSAB.json",
+    "fshName": "ObservationBodyHeightPSAB",
+    "fshType": "Profile",
+    "fshFile": "ObservationBodyHeightPSAB.fsh",
+    "startLine": 3,
+    "endLine": 44
+  },
+  {
+    "outputFile": "StructureDefinition-ObservationBodyWeightPSAB.json",
+    "fshName": "ObservationBodyWeightPSAB",
+    "fshType": "Profile",
+    "fshFile": "ObservationBodyWeightPSAB.fsh",
+    "startLine": 3,
+    "endLine": 44
+  },
+  {
+    "outputFile": "StructureDefinition-ObservationHeadCircumPSAB.json",
+    "fshName": "ObservationHeadCircumPSAB",
+    "fshType": "Profile",
+    "fshFile": "ObservationHeadCircumPSAB.fsh",
+    "startLine": 4,
+    "endLine": 45
+  },
+  {
+    "outputFile": "StructureDefinition-ObservationSocialHistoryPSAB.json",
+    "fshName": "ObservationSocialHistoryPSAB",
+    "fshType": "Profile",
+    "fshFile": "ObservationSocialHistoryPSAB.fsh",
+    "startLine": 4,
+    "endLine": 37
+  },
+  {
+    "outputFile": "StructureDefinition-PatientPSAB.json",
+    "fshName": "PatientPSAB",
+    "fshType": "Profile",
+    "fshFile": "PatientPSAB.fsh",
+    "startLine": 7,
+    "endLine": 55
+  },
+  {
+    "outputFile": "StructureDefinition-PractitionerPSAB.json",
+    "fshName": "PractitionerPSAB",
+    "fshType": "Profile",
+    "fshFile": "PractitionerPSAB.fsh",
+    "startLine": 4,
+    "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-PractitionerRolePSAB.json",
+    "fshName": "PractitionerRolePSAB",
+    "fshType": "Profile",
+    "fshFile": "PractitionerRolePSAB.fsh",
+    "startLine": 4,
+    "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-individual-recordedSexOrGenderAB.json",
+    "fshName": "RecordedSexOrGenderAB",
+    "fshType": "Extension",
+    "fshFile": "RecordedSexOrGenderPSAB.fsh",
+    "startLine": 6,
+    "endLine": 82
+  }
+]

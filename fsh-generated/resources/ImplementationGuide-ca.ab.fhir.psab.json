@@ -1,0 +1,276 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ca.ab.fhir.psab",
+  "url": "https://www.alberta.ca/fhir/psab/ImplementationGuide/ca.ab.fhir.psab",
+  "version": "0.3.0",
+  "name": "AlbertaPatientSummary",
+  "title": "Alberta Patient Summary",
+  "status": "draft",
+  "date": "2024-01-17",
+  "publisher": "Alberta Health",
+  "contact": [
+    {
+      "name": "Alberta Health",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://alberta.ca/hisca"
+        },
+        {
+          "system": "email",
+          "value": "hisca@gov.ab.ca"
+        }
+      ]
+    }
+  ],
+  "description": "Drafted Implementation Guide for Alberta Patient Summary (PSAB)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CA",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "packageId": "ca.ab.fhir.psab",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "ca.infoway.io.psca",
+      "version": "1.1.0-dft-ballot-te",
+      "uri": "http://fhir.infoway-inforoute.ca/io/psca",
+      "id": "ca_infoway_io_psca"
+    },
+    {
+      "packageId": "hl7.fhir.ca.baseline",
+      "version": "1.1.3",
+      "uri": "http://hl7.org/fhir/ca/baseline/ImplementationGuide/hl7.fhir.ca.baseline",
+      "id": "hl7_fhir_ca_baseline"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "FamilyMemberHistory/6be80d8c-4c63-41f1-b9b2-b06cb144afb1"
+        },
+        "name": "6be80d8c-4c63-41f1-b9b2-b06cb144afb1",
+        "exampleCanonical": "https://www.alberta.ca/fhir/psab/StructureDefinition/FamilyMemberHistoryPSAB"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AllergyIntolerancePSAB"
+        },
+        "name": "AllergyIntolerance (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR AllergyIntolerance resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA AllergyIntolerance profile and refines constraints applied to the AllergyIntolerance resource by the PS-CA project to represent the minimum expectations for the AllergyIntolerance resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BundlePSAB"
+        },
+        "name": "Bundle (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Bundle resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Bundle profile and refines constraints applied to the Bundle resource by the PS-CA project to include hard constraints (invariants) than enforce what sections and resource elements are allowed to be present in an Alberta Patient Summary. These have been applied at the Bundle level as an alternative to forbidding elements through 0..0 cardinality - to balance the need for mechanical validation on Patient Summary against the re-use of clinical FHIR profiles under different contexts.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Bundle-PSAB-INV-Fail-Examples"
+        },
+        "name": "Bundle-PSAB-INV-Fail-Examples",
+        "exampleCanonical": "https://www.alberta.ca/fhir/psab/StructureDefinition/BundlePSAB"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Bundle-PSCA-1.1-PackageExample"
+        },
+        "name": "Bundle-PSCA-1.1-PackageExample",
+        "exampleCanonical": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/bundle-ca-ps"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Bundle-PSCA-1.1-Text-Only-Example"
+        },
+        "name": "Bundle-PSCA-1.1-Text-Only-Example",
+        "exampleCanonical": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/bundle-ca-ps"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/BundleInvExample"
+        },
+        "name": "BundleInvExample",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CompositionPSAB"
+        },
+        "name": "Composition (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Composition resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Composition profile and refines constraints applied to the Composition resource by the PS-CA project. \r\n\r\nA Canadian Patient Summary (PS-CA) document is an electronic health record extract containing essential healthcare information about a subject of care. It is informed by the IPS-UV Composition profile, but differs in its application of MS flags on some of the sections to allow for jurisdictional implementers flexibility in what sections systems must support in order to show conformance to their respective patient summaries. The PS-CA dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. Its informed by the requirements specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the international use case scenario for ‘unplanned, cross border care’, but is also designed to support a variety of use cases for cross-jurisdiction exchange. It is intended to guide implementation nationally while ensuring international exchange of patient summaries is not impeded.\r\n\r\nThis profile is based on the ClinicalDocument profile from the base R4 FHIR standard.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ConditionPSAB"
+        },
+        "name": "Condition (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Condition resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Condition profile and refines constraints applied to the Condition resource by the PS-CA project to represent the minimum expectations for the Condition resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/d520ecd1-76a0-4894-b895-b8a5a971954e"
+        },
+        "name": "d520ecd1-76a0-4894-b895-b8a5a971954e",
+        "exampleCanonical": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/patient-ca-ps"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/FamilyMemberHistoryPSAB"
+        },
+        "name": "FamilyMemberHistory (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR FamilyMemberHistory resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA FamilyMemberHistory profile and refines the constraints that represent the minimum expectations for the FamilyMemberHistory resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/HealthcareServicePSAB"
+        },
+        "name": "HealthcareService (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR HealthcareService resource for use in Alberta Patient Summaries (PS-AB). It refines constraints applied to the HealthcareService resource to represent the minimum expectations when used to convey delivery site details in the Patient Summary.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LocationPSAB"
+        },
+        "name": "Location (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Location resource for use in Alberta Patient Summaries (PS-AB). It includes constraints that represent the minimum expectations for the Location resource when used in the PS-AB Organization profile or in one of the referred resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationPSAB"
+        },
+        "name": "Medication (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Medication resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Medication profile and refines the constraints that represent the minimum expectations for the Medication resource when used in the PS-AB MedicationStatement profile",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationStatementPSAB"
+        },
+        "name": "MedicationStatement (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR MedicationStatement resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA MedicationStatement profile and refines constraints that represent the minimum expectations for the MedicationStatement resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservationBMIPSAB"
+        },
+        "name": "ObservationBMI (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Observation (BMI) resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the HL7 FHIR BMI Profile and refines constraints applied to the Observation (BMI) resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservationBodyHeightPSAB"
+        },
+        "name": "ObservationBodyHeight (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Observation (BodyHeight) resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the HL7 FHIR BodyHeight Profile and refines constraints applied to the Observation (BodyHeight) resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservationBodyWeightPSAB"
+        },
+        "name": "ObservationBodyWeight (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Observation (BodyWeight) resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the HL7 FHIR BodyWeight Profile and refines constraints applied to the Observation (BodyWeight) resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservationHeadCircumPSAB"
+        },
+        "name": "ObservationHeadCircumference (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Observation (HeadCircumference) resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the HL7 FHIR HeadCircumference Profile and refines constraints applied to the Observation (HeadCircumference) resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PatientPSAB"
+        },
+        "name": "Patient (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Patient resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Patient profile and refines constraints applied to the Patient resource by the PS-CA project to represent the minimum expectations for the Patient resource when used in the PS-AB Composition profile or in one of the referred resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Composition/Composition1Example"
+        },
+        "name": "Patient Summary - AB",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/individual-recordedSexOrGenderAB"
+        },
+        "name": "Person Recorded Sex Or Gender AB Profile",
+        "description": "This extension re-profiles the PS-CA recordedSexOrGender extension to enable supply of recorded sex or recorded gender concepts in FHIR R4.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PractitionerPSAB"
+        },
+        "name": "Practitioner (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Practitioner resource for use in Alberta Patient Summaries (PS-AB). It includes constraints that represent the minimum expectations for the Practitioner resource when used in the PS-AB Composition profile or in one of the referred resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PractitionerRolePSAB"
+        },
+        "name": "PractitionerRole (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR PractitionerRole resource for use in Alberta Patient Summaries (PS-AB). It includes constraints that represent the minimum expectations for the PractitionerRole resource when used in the PS-AB Composition profile or in one of the referred resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservationSocialHistoryPSAB"
+        },
+        "name": "Social History Observation (PS-AB)",
+        "description": "This profile defines a set of constraints to the FHIR Observation (Social History) resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Social History (General) profile and refines constraints applied to the Observation (Social History) resource when used in the PS-AB Composition profile.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2022+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}

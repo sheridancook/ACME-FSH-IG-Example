@@ -1,0 +1,105 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "FamilyMemberHistoryPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/FamilyMemberHistoryPSAB",
+  "name": "FamilyMemberHistoryPSAB",
+  "title": "FamilyMemberHistory (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR FamilyMemberHistory resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA FamilyMemberHistory profile and refines the constraints that represent the minimum expectations for the FamilyMemberHistory resource when used in the PS-AB Composition profile.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "FamilyMemberHistory",
+  "baseDefinition": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/familymemberhistory-ca-ps",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "FamilyMemberHistory",
+        "path": "FamilyMemberHistory",
+        "comment": "FamilyMemberHistory resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following FamilyMemberHistory details: dataAbsentReason, date, name, sex, born[x], age[x], estimatedAge, deceased[x], reasonCode, and reasonReference. These rules are mechanically enforced through invariants at the PS-AB Bundle level.",
+        "constraint": [
+          {
+            "key": "psab-fhs-1",
+            "human": "If FamilyMemberHistory is submitted, it must include either FamilyMemberHistory.note or FamilyMemberHistory.condition.note",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/FamilyMemberHistoryPSAB",
+            "severity": "error",
+            "expression": "note.exists() or condition.note.exists()"
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.patient",
+        "path": "FamilyMemberHistory.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PatientPSAB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "FamilyMemberHistory.relationship.text",
+        "path": "FamilyMemberHistory.relationship.text",
+        "comment": "The full label of the family relationship (e.g., 'brother', 'sister', 'grandmother', etc.). Abbreviations are not allowed, to avoid confusion or misinterpretation. String: Max Character length (20) Required if a family history condition or characteristic is submitted.",
+        "min": 1
+      },
+      {
+        "id": "FamilyMemberHistory.note",
+        "path": "FamilyMemberHistory.note",
+        "comment": "Some form of note is required if family history data is being submitted. FamilyMemberHistory.note is used when the note cannot be distinctly tied to the condition property (i.e., familyMemberHistory.condition.note)."
+      },
+      {
+        "id": "FamilyMemberHistory.note.text",
+        "path": "FamilyMemberHistory.note.text",
+        "comment": "Required if FamilyMemberHistory.note is populated. String: Max Character length (2000)"
+      },
+      {
+        "id": "FamilyMemberHistory.condition",
+        "path": "FamilyMemberHistory.condition",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.onset[x]",
+        "path": "FamilyMemberHistory.condition.onset[x]",
+        "comment": "Required if a family history condition or characteristic is submitted. May contain a number (age or year), or a textual description of an age, age range or life stage. String: Max Character length (50)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.note",
+        "path": "FamilyMemberHistory.condition.note",
+        "mustSupport": true
+      },
+      {
+        "id": "FamilyMemberHistory.condition.note.text",
+        "path": "FamilyMemberHistory.condition.note.text",
+        "comment": "Required if FamilyMemberHistory.condition.note is populated. String: Max Character length (2000)"
+      }
+    ]
+  }
+}

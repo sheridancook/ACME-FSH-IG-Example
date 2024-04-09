@@ -1,0 +1,162 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "LocationPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/LocationPSAB",
+  "name": "LocationPSAB",
+  "title": "Location (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Location resource for use in Alberta Patient Summaries (PS-AB). It includes constraints that represent the minimum expectations for the Location resource when used in the PS-AB Organization profile or in one of the referred resources.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Location",
+        "path": "Location",
+        "comment": "Location resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following Location details: telecom.use, position, and endpoint. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "Location.identifier",
+        "path": "Location.identifier",
+        "min": 1
+      },
+      {
+        "id": "Location.identifier.type",
+        "path": "Location.identifier.type",
+        "comment": "Must be a valid delivery site type ('domain') associated to the submitted identifier value 'AHWFACID' for AH Billing ID type, 'DPHIEXSTKID' for site WDFA key type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.identifier.value",
+        "path": "Location.identifier.value",
+        "comment": "Must be a valid provincially-assigned delivery site identifier (Site WDFA key, AH Billing ID, or other approved identifier)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.status",
+        "path": "Location.status",
+        "comment": "'Active' recommended (but not required)"
+      },
+      {
+        "id": "Location.name",
+        "path": "Location.name",
+        "comment": "Max Character length (100)",
+        "min": 1
+      },
+      {
+        "id": "Location.telecom",
+        "path": "Location.telecom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Location.telecom:Phone",
+        "path": "Location.telecom",
+        "sliceName": "Phone",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.telecom:Phone.system",
+        "path": "Location.telecom.system",
+        "min": 1,
+        "patternCode": "phone",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.telecom:Phone.value",
+        "path": "Location.telecom.value",
+        "comment": "Formatted as: #-###-###-####",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.telecom:Fax",
+        "path": "Location.telecom",
+        "sliceName": "Fax",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Location.telecom:Fax.system",
+        "path": "Location.telecom.system",
+        "min": 1,
+        "patternCode": "fax",
+        "mustSupport": true
+      },
+      {
+        "id": "Location.telecom:Fax.value",
+        "path": "Location.telecom.value",
+        "comment": "Formatted as: #-###-###-####",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address",
+        "path": "Location.address",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.line",
+        "path": "Location.address.line",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.city",
+        "path": "Location.address.city",
+        "comment": "Max Character length (100)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.state",
+        "path": "Location.address.state",
+        "comment": "Canadian Province/Territory Codes",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.postalCode",
+        "path": "Location.address.postalCode",
+        "comment": "Must be valid Canadian alphanumeric (A/N) postal code formatted as: ANA NAN",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Location.address.country",
+        "path": "Location.address.country",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

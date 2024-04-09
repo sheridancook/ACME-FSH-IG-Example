@@ -1,0 +1,184 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ObservationBMIPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/ObservationBMIPSAB",
+  "name": "ObservationBMIPSAB",
+  "title": "ObservationBMI (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Observation (BMI) resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the HL7 FHIR BMI Profile and refines constraints applied to the Observation (BMI) resource when used in the PS-AB Composition profile.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/bmi",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "comment": "Observation (Vital Sign) resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following Observation details: basedOn, partOf, category.extension, category.coding.extension, code.extension, focus, encounter, issued, value.extension, and dataAbsentReason. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "comment": "Required for each measured observation value submitted",
+        "patternCode": "final"
+      },
+      {
+        "id": "Observation.category:VSCat",
+        "path": "Observation.category",
+        "sliceName": "VSCat",
+        "sliceIsConstraining": true
+      },
+      {
+        "id": "Observation.category:VSCat.coding.system",
+        "path": "Observation.category.coding.system",
+        "comment": "Fixed system value of 'http://terminology.hl7.org/CodeSystem/observation-category'"
+      },
+      {
+        "id": "Observation.category:VSCat.coding.code",
+        "path": "Observation.category.coding.code",
+        "comment": "Fixed code value of 'vital-signs'"
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:BMICode",
+        "path": "Observation.code.coding",
+        "sliceName": "BMICode",
+        "sliceIsConstraining": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:BMICode.system",
+        "path": "Observation.code.coding.system",
+        "comment": "Fixed value of 'http://loinc.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding:BMICode.code",
+        "path": "Observation.code.coding.code",
+        "comment": "Fixed value of '39156-5'",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PatientPSAB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.subject.reference",
+        "path": "Observation.subject.reference",
+        "min": 1
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "comment": "Required for each measured observation value submitted"
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "comment": "YYYY-MM-DDThh:mm:ss[+|-]ZZ:ZZ  e.g.,: 1980-05-31T12:23:12-05:00",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity",
+        "path": "Observation.value[x]",
+        "sliceName": "valueQuantity",
+        "comment": "If BMI observation is submitted it shall have an observation value",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.value",
+        "path": "Observation.value[x].value",
+        "comment": "If BMI observation is submitted it shall contain Numeric (integer) - Max Character length (3)"
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.unit",
+        "path": "Observation.value[x].unit",
+        "comment": "Required if BMI is submitted. Full text or abbreviation (e.g., ft, feet, in, inches, cm, centimeters, etc.)"
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.system",
+        "path": "Observation.value[x].system",
+        "comment": "Fixed system value of 'http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.code",
+        "path": "Observation.value[x].code",
+        "comment": "Fixed code value of 'kg/m2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+        "resourceType": "FamilyMemberHistory",
+        "id": "6be80d8c-4c63-41f1-b9b2-b06cb144afb1",
+        "meta": {
+          "profile": [
+            "https://www.alberta.ca/fhir/psab/StructureDefinition/FamilyMemberHistoryPSAB"
+          ]
+        },
+        "status": "completed",
+        "patient": {
+            "reference": "urn:uuid:d520ecd1-76a0-4894-b895-b8a5a971954e"
+        },
+        "relationship": {
+            "text": "Father"
+        },
+        "date" : "2024-01-05",
+         "condition": [
+            {
+             "code": {
+            "text": "Heart Attack"
+          },
+          "onsetString": "54",
+             "note": [
+                {
+                  "text": "Was fishing at the time. At least he went doing someting he loved."
+                }
+             ]
+            }
+         ]
+      }

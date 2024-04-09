@@ -1,0 +1,99 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PractitionerRolePSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/PractitionerRolePSAB",
+  "name": "PractitionerRolePSAB",
+  "title": "PractitionerRole (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR PractitionerRole resource for use in Alberta Patient Summaries (PS-AB). It includes constraints that represent the minimum expectations for the PractitionerRole resource when used in the PS-AB Composition profile or in one of the referred resources.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole",
+        "path": "PractitionerRole",
+        "comment": "PractitionerRole resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following PractitionerRole details: endpoint. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "PractitionerRole.active",
+        "path": "PractitionerRole.active",
+        "comment": "If PractitionerRole.active is populated it must always be Active at the time of patient summary submission",
+        "patternBoolean": true
+      },
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PractitionerPSAB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "PractitionerRole.practitioner.reference",
+        "path": "PractitionerRole.practitioner.reference",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "comment": "Mandatory, Reference set: Provider Expertise Codes",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+        }
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/LocationPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.location.reference",
+        "path": "PractitionerRole.location.reference",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HealthcareServicePSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/HealthcareServicePSAB",
+  "name": "HealthcareServicePSAB",
+  "title": "HealthcareService (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR HealthcareService resource for use in Alberta Patient Summaries (PS-AB). It refines constraints applied to the HealthcareService resource to represent the minimum expectations when used to convey delivery site details in the Patient Summary.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "HealthcareService",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareService",
+        "path": "HealthcareService",
+        "comment": "HealthcareService resources included in Alberta Patient Summary Document Bundles SHALL NOT contain any of the following HealthcareService details: photo. These rules are mechanically enforced through invariants at the PS-AB Bundle level."
+      },
+      {
+        "id": "HealthcareService.location",
+        "path": "HealthcareService.location",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "profile"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.location:deliverSite",
+        "path": "HealthcareService.location",
+        "sliceName": "deliverSite",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/LocationPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.location:deliverSite.type",
+        "path": "HealthcareService.location.type",
+        "patternUri": "Location"
+      },
+      {
+        "id": "HealthcareService.location:deliverSite.display",
+        "path": "HealthcareService.location.display",
+        "comment": "This element describes the delivery site (a medical practice at a specific location), where the authoring provider curated the patient summary from the available medical chart."
+      }
+    ]
+  }
+}

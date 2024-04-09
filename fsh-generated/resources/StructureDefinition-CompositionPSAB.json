@@ -1,0 +1,356 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CompositionPSAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/CompositionPSAB",
+  "name": "CompositionPSAB",
+  "title": "Composition (PS-AB)",
+  "status": "draft",
+  "description": "This profile defines a set of constraints to the FHIR Composition resource for use in Alberta Patient Summaries (PS-AB). It re-profiles the PS-CA Composition profile and refines constraints applied to the Composition resource by the PS-CA project. \r\n\r\nA Canadian Patient Summary (PS-CA) document is an electronic health record extract containing essential healthcare information about a subject of care. It is informed by the IPS-UV Composition profile, but differs in its application of MS flags on some of the sections to allow for jurisdictional implementers flexibility in what sections systems must support in order to show conformance to their respective patient summaries. The PS-CA dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. Its informed by the requirements specified in EN 17269 and ISO/DIS 27269, it is designed for supporting the international use case scenario for ‘unplanned, cross border care’, but is also designed to support a variety of use cases for cross-jurisdiction exchange. It is intended to guide implementation nationally while ensuring international exchange of patient summaries is not impeded.\r\n\r\nThis profile is based on the ClinicalDocument profile from the base R4 FHIR standard.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/composition-ca-ps",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "constraint": [
+          {
+            "key": "psab-comp-1",
+            "human": "If Composition.title is Patient Summary - AB, then the following elements SHALL NOT be present: attester, relatesTo, and event",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/CompositionPSAB",
+            "severity": "error",
+            "expression": "Composition.title = 'Patient Summary - AB' implies attester.exists().not() and relatesTo.exists().not() and event.exists().not()"
+          },
+          {
+            "key": "psab-comp-2",
+            "human": "If Composition.title is Patient Summary - AB, then the following sections SHALL NOT be present: sectionImmunizations, sectionMedicalDevices, sectionResults, sectionPastIllnessHx, sectionFunctionalStatus, sectionPlanOfCare, sectionPregnancyHx, sectionAdvanceDirectives",
+            "source": "https://www.alberta.ca/fhir/psab/StructureDefinition/CompositionPSAB",
+            "severity": "error",
+            "expression": "Composition.title = 'Patient Summary - AB' implies section.code.coding.where(code = '11369-6').exists().not() and section.code.coding.where(code = '46264-8').exists().not() and section.code.coding.where(code = '30954-2').exists().not() and section.code.coding.where(code = '11348-0').exists().not() and section.code.coding.where(code = '47420-5').exists().not() and section.code.coding.where(code = '18776-5').exists().not() and section.code.coding.where(code = '10162-6').exists().not() and section.code.coding.where(code = '42348-3').exists().not()"
+          }
+        ]
+      },
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "comment": "Must be UUID or equivalent identifier to ensure uniqueness across all patient summary submissions",
+        "min": 1
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "comment": "Final = first submission of a newly curated summary\r\nAmended = modification to a previously curated and submitted summary\r\nEntered-in-error = previously submitted summary that is to be removed from the patient's record, as it was entered/submitted in error (wrong patient, unintended submission, etc.)\r\nPreliminary - NOT USED IN ALBERTA"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PatientPSAB"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PractitionerPSAB",
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PractitionerRolePSAB",
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/PatientPSAB",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.author.reference",
+        "path": "Composition.author.reference",
+        "min": 1
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "patternString": "Patient Summary - AB"
+      },
+      {
+        "id": "Composition.confidentiality",
+        "path": "Composition.confidentiality",
+        "patternCode": "R",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "min": 1
+      },
+      {
+        "id": "Composition.custodian.display",
+        "path": "Composition.custodian.display",
+        "comment": "AH is responsible for the maintenance of the data (versions, archive rules, etc), not the maintenance of the content",
+        "patternString": "Alberta Health"
+      },
+      {
+        "id": "Composition.section:sectionMedications",
+        "path": "Composition.section",
+        "sliceName": "sectionMedications"
+      },
+      {
+        "id": "Composition.section:sectionMedications.title",
+        "path": "Composition.section.title",
+        "patternString": "Medication Summary"
+      },
+      {
+        "id": "Composition.section:sectionMedications.text",
+        "path": "Composition.section.text",
+        "comment": "Systems creating patient summaries are required to populate section.text (IPS conformance requirement - see All Slices), Alberta patient summary pilot systems MAY populate this information with non-meaningful content (e.g., duplicated title text) until/unless further guidance is established for how systems should populate should approach text for cross-border use (e.g., generated automatically with structured data, manually entered)"
+      },
+      {
+        "id": "Composition.section:sectionMedications.entry:medicationStatement",
+        "path": "Composition.section.entry",
+        "sliceName": "medicationStatement",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/MedicationStatementPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionMedications.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAllergies",
+        "path": "Composition.section",
+        "sliceName": "sectionAllergies"
+      },
+      {
+        "id": "Composition.section:sectionAllergies.title",
+        "path": "Composition.section.title",
+        "patternString": "Allergies and Intolerances"
+      },
+      {
+        "id": "Composition.section:sectionAllergies.text",
+        "path": "Composition.section.text",
+        "comment": "Systems creating patient summaries are required to populate section.text (IPS conformance requirement - see All Slices), Alberta patient summary pilot systems MAY populate this information with non-meaningful content (e.g., duplicated title text) until/unless further guidance is established for how systems should populate should approach text for cross-border use (e.g., generated automatically with structured data, manually entered)"
+      },
+      {
+        "id": "Composition.section:sectionAllergies.entry:allergyOrIntolerance",
+        "path": "Composition.section.entry",
+        "sliceName": "allergyOrIntolerance",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/AllergyIntolerancePSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionAllergies.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProblems",
+        "path": "Composition.section",
+        "sliceName": "sectionProblems"
+      },
+      {
+        "id": "Composition.section:sectionProblems.title",
+        "path": "Composition.section.title",
+        "patternString": "Problem List"
+      },
+      {
+        "id": "Composition.section:sectionProblems.text",
+        "path": "Composition.section.text",
+        "comment": "Systems creating patient summaries are required to populate section.text (IPS conformance requirement - see All Slices), Alberta patient summary pilot systems MAY populate this information with non-meaningful content (e.g., duplicated title text) until/unless further guidance is established for how systems should populate should approach text for cross-border use (e.g., generated automatically with structured data, manually entered)"
+      },
+      {
+        "id": "Composition.section:sectionProblems.entry:problem",
+        "path": "Composition.section.entry",
+        "sliceName": "problem",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/ConditionPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProblems.emptyReason",
+        "path": "Composition.section.emptyReason",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx",
+        "path": "Composition.section",
+        "sliceName": "sectionProceduresHx",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.title",
+        "path": "Composition.section.title",
+        "patternString": "History of Procedures"
+      },
+      {
+        "id": "Composition.section:sectionProceduresHx.text",
+        "path": "Composition.section.text",
+        "comment": "When this section is shared in an Alberta Patient Summary, information on procedures is expected to be conveyed under section.text (rather than as a Procedure FHIR resource in section.entry)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns",
+        "path": "Composition.section",
+        "sliceName": "sectionVitalSigns",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.title",
+        "path": "Composition.section.title",
+        "patternString": "Vital Signs"
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.text",
+        "path": "Composition.section.text",
+        "comment": "Systems creating patient summaries are required to populate section.text (IPS conformance requirement - see All Slices), Alberta patient summary pilot systems MAY populate this information with non-meaningful content (e.g., duplicated title text) until/unless further guidance is established for how systems should populate should approach text for cross-border use (e.g., generated automatically with structured data, manually entered)"
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.entry:BMI",
+        "path": "Composition.section.entry",
+        "sliceName": "BMI",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/ObservationBMIPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.entry:BodyHeight",
+        "path": "Composition.section.entry",
+        "sliceName": "BodyHeight",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/ObservationBodyHeightPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.entry:BodyWeight",
+        "path": "Composition.section.entry",
+        "sliceName": "BodyWeight",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/ObservationBodyWeightPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionVitalSigns.entry:HeadCircum",
+        "path": "Composition.section.entry",
+        "sliceName": "HeadCircum",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/ObservationHeadCircumPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory",
+        "path": "Composition.section",
+        "sliceName": "sectionSocialHistory",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.title",
+        "path": "Composition.section.title",
+        "patternString": "Social History"
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.text",
+        "path": "Composition.section.text",
+        "comment": "Systems creating patient summaries are required to populate section.text (IPS conformance requirement - see All Slices), Alberta patient summary pilot systems MAY populate this information with non-meaningful content (e.g., duplicated title text) until/unless further guidance is established for how systems should populate should approach text for cross-border use (e.g., generated automatically with structured data, manually entered)"
+      },
+      {
+        "id": "Composition.section:sectionSocialHistory.entry:generalSocialHistory",
+        "path": "Composition.section.entry",
+        "sliceName": "generalSocialHistory",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/ObservationSocialHistoryPSAB"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionFamilyHistory",
+        "path": "Composition.section",
+        "sliceName": "sectionFamilyHistory",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:sectionFamilyHistory.title",
+        "path": "Composition.section.title",
+        "patternString": "Family History"
+      },
+      {
+        "id": "Composition.section:sectionFamilyHistory.text",
+        "path": "Composition.section.text",
+        "comment": "Systems creating patient summaries are required to populate section.text (IPS conformance requirement - see All Slices), Alberta patient summary pilot systems MAY populate this information with non-meaningful content (e.g., duplicated title text) until/unless further guidance is established for how systems should populate should approach text for cross-border use (e.g., generated automatically with structured data, manually entered)"
+      },
+      {
+        "id": "Composition.section:sectionFamilyHistory.entry:FamilyMemberHistory",
+        "path": "Composition.section.entry",
+        "sliceName": "FamilyMemberHistory",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.alberta.ca/fhir/psab/StructureDefinition/FamilyMemberHistoryPSAB"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

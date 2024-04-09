@@ -1,0 +1,96 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "individual-recordedSexOrGenderAB",
+  "url": "https://www.alberta.ca/fhir/psab/StructureDefinition/individual-recordedSexOrGenderAB",
+  "name": "RecordedSexOrGenderAB",
+  "title": "Person Recorded Sex Or Gender AB Profile",
+  "status": "draft",
+  "experimental": false,
+  "date": "2022-01-28",
+  "publisher": "HL7 International / FHIR Infrastructure",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/fhir-i"
+        }
+      ]
+    }
+  ],
+  "description": "This extension re-profiles the PS-CA recordedSexOrGender extension to enable supply of recorded sex or recorded gender concepts in FHIR R4.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Patient",
+      "type": "element"
+    },
+    {
+      "expression": "RelatedPerson",
+      "type": "element"
+    },
+    {
+      "expression": "Person",
+      "type": "element"
+    },
+    {
+      "expression": "Practitioner",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:value",
+        "path": "Extension.extension",
+        "sliceName": "value"
+      },
+      {
+        "id": "Extension.extension:value.value[x]",
+        "path": "Extension.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.alberta.ca/fhir/ValueSet/administrative-gender-ab",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "recordedSexOrGender"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Extension.extension:type",
+        "path": "Extension.extension",
+        "sliceName": "type"
+      },
+      {
+        "id": "Extension.extension:type.value[x].coding.code",
+        "path": "Extension.extension.value[x].coding.code",
+        "fixedCode": "XCA04739-9"
+      }
+    ]
+  }
+}
